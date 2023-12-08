@@ -1,0 +1,374 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+/* BASIC */
+
+html {
+  background-color: rgba(39, 37, 37, 0.911);
+  margin-top: -44.5rem;
+  padding-top: 1.4rem;
+  height: 100vh;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+a {
+  color: #92badd;
+  display: inline-block;
+  text-decoration: none;
+  font-weight: 400;
+}
+
+h2 {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  display: inline-block;
+  margin: 3rem 0.4rem 0.6rem 0.4rem;
+  color: #cccccc;
+}
+
+img {
+  max-inline-size: 100%;
+  block-size: auto;
+  width: 100%;
+  height: 100%;
+}
+
+/* STRUCTURE */
+
+#formContent {
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  background: #fff;
+  width: 90%;
+  max-width: 30rem;
+  padding: 0px;
+  -webkit-box-shadow: 0 2rem 4rem 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2rem 4rem 0 rgba(0, 0, 0, 0.3);
+  text-align: center;
+  background-color: #15172b;
+  border: 1px solid #bcbcbc;
+}
+
+/* TABS */
+
+h2.inactive {
+  color: #cccccc;
+  border-bottom: 0rem solid transparent;
+}
+
+h2.active,
+h2:hover {
+  color: #5fbae9;
+  border-bottom: 0.1rem solid #5fbae9;
+}
+
+.fadeIn {
+  opacity: 0;
+  -webkit-animation: fadeIn ease-in 1;
+  -moz-animation: fadeIn ease-in 1;
+  animation: fadeIn ease-in 1;
+
+  -webkit-animation-fill-mode: forwards;
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+
+  -webkit-animation-duration: 1s;
+  -moz-animation-duration: 1s;
+  animation-duration: 1s;
+}
+
+.fadeIn.first {
+  -webkit-animation-delay: 0.4s;
+  -moz-animation-delay: 0.4s;
+  animation-delay: 0.4s;
+}
+
+.fadeIn.second {
+  -webkit-animation-delay: 0.6s;
+  -moz-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+}
+
+.fadeIn.third {
+  -webkit-animation-delay: 0.8s;
+  -moz-animation-delay: 0.8s;
+  animation-delay: 0.8s;
+}
+
+.fadeIn.fourth {
+  -webkit-animation-delay: 1s;
+  -moz-animation-delay: 1s;
+  animation-delay: 1s;
+}
+
+.underlineHover::after {
+  display: block;
+  left: 0;
+  bottom: -10px;
+  width: 0;
+  height: 0.1rem;
+  background-color: #56baed;
+  content: "";
+  transition: width 400ms;
+}
+
+.underlineHover:hover {
+  color: #56baed;
+}
+
+.underlineHover:hover::after {
+  width: 100%;
+}
+
+/* OTHERS */
+
+*:focus {
+  outline: none;
+}
+
+#icon {
+  width: 30%;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  display: unset;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* masonry */
+
+body {
+  margin: 0.6rem;
+}
+
+.grid {
+  columns: 20rem;
+  pointer-events: none;
+}
+
+.item ~ .item {
+  margin-top: 1rem;
+}
+
+.item {
+  break-inside: avoid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  object-fit: cover;
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+html::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+html {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.imgInput::file-selector-button {
+  font-weight: bold;
+  color: dodgerblue;
+  padding: 0.5em;
+  border: thin solid grey;
+  border-radius: 3px;
+  margin: 1em;
+}
+
+.imgInput::file-selector-button:hover {
+  cursor: pointer;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 1.3rem;
+  position: sticky;
+  top: 15%;
+}
+
+.submitBTN:hover {
+  cursor: pointer;
+}
+
+.form {
+  background-color: #15172b;
+  border-radius: 20px;
+  padding: 1rem;
+  color: white;
+}
+
+.input-container {
+  height: 50px;
+  position: relative;
+  width: 100%;
+  margin-top: 1rem;
+}
+
+.input {
+  background-color: #303245;
+  border-radius: 12px;
+  border: 0;
+  box-sizing: border-box;
+  color: #eee;
+  font-size: 18px;
+  outline: 0;
+  padding: 0.5rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.passCreate,
+.textField {
+  margin-top: 3rem;
+}
+
+.passCreate .input {
+  height: 100%;
+}
+
+.cut {
+  background-color: #15172b;
+  border-radius: 10px;
+  height: 20px;
+  left: 20px;
+  position: absolute;
+  top: -20px;
+  transform: translateY(0);
+  transition: transform 200ms;
+  width: 4.5rem;
+}
+
+.cut-short {
+  width: 3.5rem;
+}
+
+.input:focus ~ .cut,
+.input:not(:placeholder-shown) ~ .cut {
+  transform: translateY(8px);
+}
+
+.placeholder {
+  color: #65657b;
+  font-family: sans-serif;
+  left: 20px;
+  line-height: 14px;
+  pointer-events: none;
+  position: absolute;
+  transform-origin: 0 50%;
+  transition: transform 200ms, color 200ms;
+  top: 1rem;
+}
+
+.input:focus ~ .placeholder,
+.input:not(:placeholder-shown) ~ .placeholder {
+  transform: translateY(-30px) translateX(10px) scale(0.75);
+}
+
+.input:not(:placeholder-shown) ~ .placeholder {
+  color: #808097;
+}
+
+.input:focus ~ .placeholder {
+  color: #dc2f55;
+}
+
+.submit {
+  background-color: #08d;
+  border-radius: 15px;
+  border: 0;
+  box-sizing: border-box;
+  color: #eee;
+  cursor: pointer;
+  font-size: 1.2rem;
+  height: 50px;
+  margin-top: 2.5rem;
+  outline: 0;
+  text-align: center;
+  width: 100%;
+}
+
+.submit:active {
+  background-color: #06b;
+}
+
+.google_button_container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  border-radius: 15px;
+}
+
+.google_button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1.5rem;
+}
+
+.google_button img {
+  width: 3rem;
+  height: 3rem;
+  margin-right: 3rem;
+}
+
+/* ANIMATIONS */
+
+.fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -50%, 0);
+    transform: translate3d(0, -50%, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@-moz-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

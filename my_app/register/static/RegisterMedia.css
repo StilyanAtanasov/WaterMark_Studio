@@ -1,0 +1,31 @@
+@media screen and (max-height: 800px) {
+  .wrapper {
+    scale: 0.6;
+    top: 0%;
+  }
+}
+
+@media screen and (min-height: 1400px) {
+  .wrapper {
+    scale: 1.7;
+    top: 20%;
+  }
+}
+
+@media screen and ((min-width: 2000px) or (min-height: 1400px)) {
+  html {
+    font-size: 20px;
+  }
+}
+
+@media screen and ((min-width: 3000px) or (min-height: 1700px)) {
+  html {
+    font-size: 25px;
+  }
+}
+
+@media screen and (max-height: 900px) {
+  html {
+    font-size: 12px;
+  }
+}

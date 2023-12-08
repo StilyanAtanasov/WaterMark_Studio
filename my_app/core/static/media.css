@@ -1,0 +1,67 @@
+/* TV */
+
+@media only screen and ((max-width: 1500px) and (max-height: 900px)) {
+  html {
+    font-size: 81.25%;
+  }
+}
+
+@media only screen and ((min-width: 2000px) and (min-height: 1250px)) {
+  html {
+    font-size: 125%;
+  }
+}
+
+@media only screen and ((min-width: 2500px) and (min-height: 1400px)) {
+  html {
+    font-size: 150%;
+  }
+}
+
+@media only screen and ((min-width: 3000px) and (min-height: 1700px)) {
+  html {
+    font-size: 180%;
+  }
+}
+
+@media only screen and ((min-width: 3800px) and (min-height: 2100px)) {
+  html {
+    font-size: 200%;
+  }
+}
+
+@media only screen and ((min-width: 4500px) and (min-height: 2500px)) {
+  html {
+    font-size: 250%;
+  }
+}
+
+@media only screen and ((min-width: 5500px) and (min-height: 3000px)) {
+  html {
+    font-size: 300%;
+  }
+}
+
+@media only screen and (max-width: 1400px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  html {
+    font-size: 43.75%;
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  html {
+    font-size: 33%;
+  }
+}

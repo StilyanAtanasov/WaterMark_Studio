@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" class="downloadHTML">
+   <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Download Processed Image</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('core_bp.static', filename='images/WM1.ico') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('core_bp.static', filename='reset.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('core_bp.static', filename='header.css') }}"/>
+      <link rel="stylesheet" type="text/css" href="{{ url_for('core_bp.static', filename='loader.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('core_bp.static', filename='global.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('watermarking_bp.static', filename='watermarking.css') }}"/>
+      <link rel="stylesheet" type="text/css" href="{{ url_for('watermarking_bp.static', filename='WatermarkingMedia.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('core_bp.static', filename='footer.css') }}"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+  </head>
+  <body>
+    <header id="navbar" class="navbar">
+      <div class="mobileLeftSide">
+        <div id="bars" class="bars">
+          <div id="bar1" class="bar"></div>
+          <div id="bar2" class="bar"></div>
+          <div id="bar3" class="bar"></div>
+        </div>
+        <a class="navlogo"> WaterMark Studio</a>
+      </div>
+
+      <div class="navWrap">
+        <a href="/" class="navlink">Home</a>
+        <a href="#" class="navlink underBuild">My Profile</a>
+        <a href="#" class="navlink underBuild">About</a>
+        <a href="#" class="navlink underBuild">Contact us</a>
+      </div>
+      <div class="sidebar">
+        <div class="dropdown">
+          <label id="dropdown__face" class="dropdown__face" for="dropdown">
+            <div class="buttonwrap">
+              <span class="dropdown__text navlogo">CREATE </span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+          </label>
+
+          <ul id="dropdown__items" class="dropdown__items">
+            <li>
+              <a class="sidelink" href="/textWatermark">RSH Mark</a>
+            </li>
+            <li><a class="sidelink" href="/imageWatermark">MSB Mark</a></li>
+          </ul>
+        </div>
+        <div class="logoutContainer">
+          <a class="link" href="{{ url_for('registration_bp.logout') }}">
+            <span class="link--top">Logout</span>
+            <span class="link--bottom">Logout</span>
+          </a>
+        </div>
+      </div>
+    </header>
+    <main class="downloadMain">
+      <div class="branding">
+           <img src="{{ url_for('core_bp.static', filename = 'images/WM1.png') }}" alt="LOGO" />
+      </div>
+
+      <section class="downloadFormBox">
+        <div class="form formLarge">
+          <h3>Processed Image</h3>
+          <img
+            id="errorIMG"
+            src="data:image/png;base64,{{img_data1}}"
+            alt="Processed image"
+            onerror="this.style.display='none'"
+          />
+          <span id="errorText" class="errorMessage" style="display: none"
+            ><i class="fa-solid fa-face-frown"></i> Visualizing error: Failed to
+            load image!</span
+          >
+          <a href="data:image/png;base64,{{img_data2}}" download="wm.png">
+            <button class="submit">Download Image</button>
+          </a>
+        </div>
+      </section>
+    </main>
+      <footer class="footer">
+      <div class="logoSection">
+        <a class="navlogo footerLogo" href="#">WaterMark Studio</a>
+        <span class="rights"
+          >Copyright © 2023 WaterMark Studio All Rights Reserved.</span
+        >
+      </div>
+
+      <div class="footerLinks">
+        <div class="footerGroup">
+          <p class="footerTitle">Pages</p>
+          <ul class="navlinkwrap">
+            <li href="/" class="navlink small">Home</li>
+            <li href="#" class="navlink small underBuild">My Profile</li>
+            <li href="#" class="navlink small underBuild">About</li>
+            <li href="#" class="navlink small underBuild">Contact us</li>
+          </ul>
+        </div>
+
+        <div class="footerGroup">
+          <p class="footerTitle">Media</p>
+          <ul class="navlinkwrap">
+            <li href="#" class="navlink small">Facebook</li>
+            <li href="https://www.instagram.com/wmarkstudio" class="navlink small">Instagram</li>
+            <li href="#" class="navlink small">YouTube</li>
+            <li href="#" class="navlink small">Twitter</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <div id="loader" class="lds-hourglass"></div>
+    <script src="{{ url_for('core_bp.static', filename='loading.js') }}"></script>
+    <script src="{{ url_for('core_bp.static', filename='global.js') }}"></script>
+    <script src="{{ url_for('watermarking_bp.static', filename='downloadInteractions.js') }}"></script>
+    <script src="{{ url_for('core_bp.static', filename='header.js') }}"></script>
+  </body>
+</html>

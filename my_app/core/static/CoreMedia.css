@@ -1,0 +1,196 @@
+/* Making Background responsible */
+
+@media only screen and (max-width: 700px) {
+  .dot1 {
+    top: 9.2rem;
+  }
+
+  .dot2 {
+    top: 20rem;
+  }
+
+  .dot3 {
+    top: 50rem;
+  }
+
+  .dot4 {
+    top: 70rem;
+  }
+
+  .dot5 {
+    top: 120rem;
+  }
+
+  @keyframes animateDot2 {
+    0% {
+      top: 20rem;
+    }
+    25% {
+      top: 15rem;
+    }
+    50% {
+      top: 18rem;
+    }
+    75% {
+      top: 15rem;
+    }
+    100% {
+      top: 20rem;
+    }
+  }
+}
+
+/* Overall view */
+
+@media only screen {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+  body {
+    position: relative;
+  }
+}
+
+/* Description */
+@media only screen and (max-width: 650px) {
+  html {
+    font-size: 6px;
+  }
+
+  .box {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 90vw;
+  }
+
+  .subtitle {
+    font-size: 1.5em;
+  }
+
+  .display {
+    margin-top: 5rem;
+    width: 50rem;
+    height: 50rem;
+  }
+
+  .infobox {
+    max-width: 90%;
+    text-align: center;
+  }
+
+  .infobox-btnwrapper {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .infobox-createbtn,
+  .infobox-explorebtn {
+    font-size: 2rem;
+    padding: 1rem 4rem;
+  }
+
+  .display {
+    max-width: 50rem;
+    max-height: 50rem;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .display {
+    max-width: 40rem;
+    max-height: 40rem;
+  }
+}
+
+/* Sterted section */
+@media only screen and (max-width: 550px) {
+  .started-items {
+    grid-template-columns: repeat(1, 80vw);
+  }
+
+  .started-items-item {
+    width: 35vw;
+    height: 35vw;
+  }
+
+  .started-items-item * {
+    font-size: calc(100vw / 10);
+  }
+
+  .started-items-item::before {
+    content: "";
+    background-color: blue;
+    filter: blur(50px);
+    width: calc(100vw / 5);
+    height: calc(100vw / 5);
+    position: absolute;
+  }
+
+  .itemwrapper:not(:last-child) {
+    margin-bottom: calc(100vw / 10);
+  }
+
+  .itemwrapper p {
+    font-size: calc(100vw / 25);
+    width: 100%;
+  }
+
+  .started {
+    margin: calc(100vw / 1.5) 0 calc(100vw / 1.5) 0;
+  }
+
+  .started > .title {
+    font-size: calc(100vw / 20);
+  }
+}
+
+/* From this to this section */
+@media only screen and (max-width: 550px) {
+  .fromThisToThis_section {
+    flex-direction: column;
+  }
+
+  .whyChoose > .title {
+    font-size: calc(100vw / 22);
+  }
+
+  .fromThisToThis_element {
+    height: calc(100vh / 4);
+    max-width: 80vw;
+  }
+
+  .fromIMG,
+  .toIMG {
+    height: calc(100vh / 4);
+    max-width: 80vw;
+    width: auto;
+  }
+
+  .imgs {
+    height: calc(100vh / 4);
+    display: flex;
+    justify-content: center;
+  }
+
+  .textBox {
+    height: calc(100vh / 5);
+    width: 80vw;
+  }
+
+  #textParagraph {
+    margin-top: 10rem;
+    max-width: 80vw;
+    position: absolute;
+  }
+}
+
+/* To top button */
+
+@media only screen and (max-width: 550px) {
+  .toTopBTN {
+    width: calc(100vw / 15);
+    height: calc(100vw / 15);
+  }
+}

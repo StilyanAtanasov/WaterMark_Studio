@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RSH Mark</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('core_bp.static', filename='images/WM1.ico') }}"/>
+      <link rel="stylesheet" type="text/css" href="{{ url_for('core_bp.static', filename='loader.css') }}" />
+      <link rel="stylesheet" type="text/css" href="{{ url_for('core_bp.static', filename='global.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('core_bp.static', filename='reset.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('core_bp.static', filename='header.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('watermarking_bp.static', filename='watermarking.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('core_bp.static', filename='media.css') }}"/>
+      <link rel="stylesheet" type="text/css" href="{{ url_for('watermarking_bp.static', filename='WatermarkingMedia.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('core_bp.static', filename='footer.css') }}"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+  </head>
+  <body>
+    <header id="navbar" class="navbar">
+      <div class="mobileLeftSide">
+        <div id="bars" class="bars">
+          <div id="bar1" class="bar"></div>
+          <div id="bar2" class="bar"></div>
+          <div id="bar3" class="bar"></div>
+        </div>
+        <a class="navlogo"> WaterMark Studio</a>
+      </div>
+
+      <div class="navWrap">
+        <a href="/" class="navlink">Home</a>
+        <a href="#" class="navlink underBuild">My Profile</a>
+        <a href="#" class="navlink underBuild">About</a>
+        <a href="#" class="navlink underBuild">Contact us</a>
+      </div>
+      <div class="sidebar">
+        <div class="dropdown">
+          <label id="dropdown__face" class="dropdown__face" for="dropdown">
+            <div class="buttonwrap">
+              <span class="dropdown__text navlogo">CREATE </span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+          </label>
+
+          <ul id="dropdown__items" class="dropdown__items">
+            <li>
+              <a class="sidelink" href="/textWatermark">RSH Mark</a>
+            </li>
+            <li><a class="sidelink" href="/imageWatermark">MSB Mark</a></li>
+          </ul>
+        </div>
+        <div class="logoutContainer">
+          <a class="link" href="{{ url_for('registration_bp.logout') }}">
+            <span class="link--top">Logout</span>
+            <span class="link--bottom">Logout</span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="branding">
+        <p class="branding_content">
+          <img src="{{ url_for('core_bp.static', filename = 'images/WM1.png') }}" alt="LOGO" />
+        </p>
+      </div>
+
+      <!-- Landing -->
+
+      <section class="landingText">
+        <h1 class="landingText_title navlogo">RSH Mark</h1>
+        <h2 class="landingText_subtitle subtitle">
+          /ReedSolomon-Hamming Mark/
+        </h2>
+        <p class="landingText_desc desc">
+          Discover our Image Security Suite – effortlessly encrypt and decrypt
+          images with concealed text seamlessly embedded. Our cutting-edge
+          technology ensures robust encryption while preserving authenticity
+          through subtle, text-within-image watermarks. Elevate your digital
+          security in just a few clicks, seamlessly blending protection with
+          aesthetic finesse.
+        </p>
+      </section>
+
+      <!-- Tutorial -->
+
+      <section class="tutorial">
+        <h2 id="tutorial_subtitle" class="tutorial_subtitle subtitle">
+          Watch the tutorial
+        </h2>
+        <p id="tutorial_desc" class="tutorial_desc desc">
+          Unlock the full potential of your RSH Mark experience with our
+          comprehensive tutorial videos. Whether you're a seasoned user or a
+          newcomer, our step-by-step guides will empower you to navigate the
+          intricacies of our site effortlessly.
+        </p>
+
+        <iframe
+          id="videoTutorial"
+          class="videoTutorial"
+          src="https://www.youtube.com/embed/_0wE5GWbXjI?si=BhBMRup3biNbgXYI"
+          title="MSB Mark tutorial"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen
+        ></iframe>
+      </section>
+
+      <!-- Encrypt form -->
+
+      <section class="Forms Forms1">
+        <h2 id="Forms_title" class="Forms_subtitle subtitle">Embed</h2>
+        <section class="Forms_content">
+          <article class="Forms_desc">
+            <h3 id="Forms_subtitle1" class="Forms_insideTitle subtitle">
+              Step 1: Select Your Base Image
+            </h3>
+            <p id="Forms_desc1">
+              Begin by choosing the image you want to use as the foundation for
+              your encrypted masterpiece.
+            </p>
+            <h3 id="Forms_subtitle2" class="Forms_insideTitle subtitle">
+              Step 2: Write Your Secret Text
+            </h3>
+            <p id="Forms_desc2">
+              Next, type the text you wish to encrypt within the base image.
+              This could be your brand name, your name, or any written content
+              you want to keep securely hidden.
+            </p>
+
+            <h3 id="Forms_subtitle3" class="Forms_insideTitle subtitle">
+              Step 3: Generate Your Encrypted Image
+            </h3>
+            <p id="Forms_desc3">
+              Once satisfied with your settings, hit the "Encrypt" button. Watch
+              as ReedSolomon-Hamming Mark seamlessly combines your base and
+              secret image and text, creating a visually indistinguishable
+              encrypted image.
+            </p>
+          </article>
+
+          <form
+            id="form1"
+            class="form"
+            action="/processing"
+            method="POST"
+            enctype="multipart/form-data"
+          >
+            <div class="input-container">
+              Image:
+              <input class="input" type="file" name="image" />
+            </div>
+
+            <div class="textField">
+              <div class="input-container">
+                <input
+                  class="input"
+                  type="text"
+                  name="wm_text"
+                  id="wm_text"
+                  placeholder=" "
+                />
+                <div class="cut cut-short"></div>
+                <label class="placeholder" for="wm_text">WM text:</label>
+              </div>
+            </div>
+            <button class="submit" type="submit">Encrypt</button>
+          </form>
+        </section>
+      </section>
+
+      <!-- Decrypt form -->
+
+      <section class="Forms short">
+        <h2 id="Forms2_title" class="Forms_subtitle subtitle">Extract</h2>
+        <section class="Forms_content">
+          <article class="Forms_desc">
+            <h3 id="Forms2_subtitle1" class="Forms_insideTitle subtitle">
+              Step 1: Upload the encrypted image
+            </h3>
+            <p id="Forms2_desc1">
+              Start with the uploading of the encrypted image that you wish to
+              unveil. This is the image you previously created through our
+              encryption studio.
+            </p>
+            <h3 id="Forms2_subtitle2" class="Forms_insideTitle subtitle">
+              Step 2: Initiate Decryption
+            </h3>
+            <p id="Forms2_desc2">
+              Click on the "Decrypt" button to initiate the decryption process.
+              WaterMark Studio will seamlessly extract the concealed text from
+              within the encrypted file, restoring it to its original form.
+            </p>
+          </article>
+
+          <form
+            id="form2"
+            class="form"
+            action="/processingBack"
+            method="POST"
+            enctype="multipart/form-data"
+          >
+            <div class="input-container">
+              Image:
+              <input
+                class="input"
+                type="file"
+                name="image_back"
+                id="image_back"
+              />
+            </div>
+            <button class="submit" type="submit">Decrypt</button>
+          </form>
+        </section>
+      </section>
+
+      <!-- return to top button -->
+      <a id="toTopBTN" href="#" class="toTopBTN"
+        ><i class="fa-solid fa-arrow-up"></i
+      ></a>
+    </main>
+     <footer class="footer">
+      <div class="logoSection">
+        <a class="navlogo footerLogo" href="#">WaterMark Studio</a>
+        <span class="rights"
+          >Copyright © 2023 WaterMark Studio All Rights Reserved.</span
+        >
+      </div>
+
+      <div class="footerLinks">
+        <div class="footerGroup">
+          <p class="footerTitle">Pages</p>
+          <ul class="navlinkwrap">
+            <li href="/" class="navlink small">Home</li>
+            <li href="#" class="navlink small underBuild">My Profile</li>
+            <li href="#" class="navlink small underBuild">About</li>
+            <li href="#" class="navlink small underBuild">Contact us</li>
+          </ul>
+        </div>
+
+        <div class="footerGroup">
+          <p class="footerTitle">Media</p>
+          <ul class="navlinkwrap">
+            <li href="#" class="navlink small">Facebook</li>
+            <li href="https://www.instagram.com/wmarkstudio" class="navlink small">Instagram</li>
+            <li href="#" class="navlink small">YouTube</li>
+            <li href="#" class="navlink small">Twitter</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <div id="loader" class="lds-hourglass"></div>
+    <script src="{{ url_for('core_bp.static', filename='loading.js') }}"></script>
+    <script src="{{ url_for('core_bp.static', filename='global.js') }}"></script>
+    <script src="{{ url_for('watermarking_bp.static', filename='windowInteractionsWM.js') }}"></script>
+    <script src="{{ url_for('core_bp.static', filename='header.js') }}"></script>
+  </body>
+</html>

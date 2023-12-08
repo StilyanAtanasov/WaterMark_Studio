@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home</title>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('core_bp.static', filename='images/WM1.ico') }}"/>
+      <link rel="stylesheet" type="text/css" href="{{ url_for('core_bp.static', filename='loader.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('core_bp.static', filename='header.css') }}"/>
+      <link rel="stylesheet" type="text/css" href="{{ url_for('core_bp.static', filename='core.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('core_bp.static', filename='global.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('core_bp.static', filename='CoreMedia.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('core_bp.static', filename='RegisterMedia.css') }}"/>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('core_bp.static', filename='footer.css') }}"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"/>
+  </head>
+  <body>
+    <header id="navbar" class="navbar">
+      <div class="mobileLeftSide">
+        <div id="bars" class="bars">
+          <div id="bar1" class="bar"></div>
+          <div id="bar2" class="bar"></div>
+          <div id="bar3" class="bar"></div>
+        </div>
+        <a class="navlogo"> WaterMark Studio</a>
+      </div>
+
+      <div class="navWrap">
+        <a href="/" class="navlink selectedlink">Home</a>
+        <a href="#" class="navlink underBuild">My Profile</a>
+        <a href="#" class="navlink underBuild">About</a>
+        <a href="#" class="navlink underBuild">Contact us</a>
+      </div>
+      <div class="sidebar">
+        <div class="dropdown">
+          <label id="dropdown__face" class="dropdown__face" for="dropdown">
+            <div class="buttonwrap">
+              <span class="dropdown__text navlogo">CREATE </span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+          </label>
+
+          <ul id="dropdown__items" class="dropdown__items">
+            <li>
+              <a class="sidelink" href="/textWatermark">RSH Mark</a>
+            </li>
+            <li><a class="sidelink" href="/imageWatermark">MSB Mark</a></li>
+          </ul>
+        </div>
+        <div class="logoutContainer">
+          <a class="link" href="{{ url_for('registration_bp.logout') }}">
+            <span class="link--top">Logout</span>
+            <span class="link--bottom">Logout</span>
+          </a>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="box">
+        <div class="infobox">
+          <p class="title low">
+            Unleash the Power of Invisible Watermarking! Protect Your Images
+            with the Invisible Shield
+          </p>
+          <p class="subtitle lows">
+            Are you ready to take your image protection to the next level? Feel
+            the power of invisible watermarking with WaterMark Studio. Preserve
+            your visual assets, secure your brand, and deter unauthorized use
+            like never before.
+          </p>
+          <div class="infobox-btnwrapper">
+            <button class="infobox-explorebtn">Explore</button>
+            <button id="selected" class="infobox-createbtn selected">
+              Create
+            </button>
+          </div>
+        </div>
+        <div class="display">
+             <img src="{{ url_for('core_bp.static', filename = 'images/Watermarking logo final2.png') }}" alt="Logo IMG" />
+        </div>
+      </div>
+
+      <div class="started">
+        <p class="title" style="align-self: center">Experience the Power</p>
+        <div class="started-items">
+          <div class="itemwrapper show-on-scroll left">
+            <div class="started-items-item">
+              <i class="fa-solid fa-shield fa-beat-fade"></i>
+            </div>
+            <p>Embed Securely</p>
+          </div>
+          <div class="itemwrapper show-on-scroll left">
+            <div class="started-items-item">
+              <i class="fa-solid fa-user-ninja fa-fade"></i>
+            </div>
+            <p>Customized Stealth</p>
+          </div>
+          <div class="itemwrapper show-on-scroll right">
+            <div class="started-items-item">
+              <i class="fa-regular fa-compass fa-flip"></i>
+            </div>
+            <p>Track and Trace</p>
+          </div>
+          <div class="itemwrapper show-on-scroll right">
+            <div class="started-items-item">
+              <i class="fa-solid fa-check fa-shake"></i>
+            </div>
+            <p>Effortless Integration</p>
+          </div>
+        </div>
+      </div>
+
+      <article id="scrollBox" class="emptyScroller">
+        <div id="spaceNeeded" class="spaceNeeded">
+          <section tabindex="0" id="whyChoose" class="whyChoose">
+            <h2 class="title">Why Choose Invisible Watermarking?</h2>
+
+            <div class="fromThisToThis_section">
+              <div class="fromThisToThis_element">
+                <h2 class="fromThisToThisHeadline title titleFadeIn">
+                  FROM THIS
+                </h2>
+                <div class="imgs">
+                  <img
+                    id="fromIMGFirst"
+                    class="fromIMG first"
+                    src="{{ url_for('core_bp.static', filename='images/imgFrom0.png') }}"
+                    alt="IMG"
+                  />
+                  <img
+                    id="fromIMGSecond"
+                    class="fromIMG second"
+                    src="{{ url_for('core_bp.static', filename='images/imgFrom1.png') }}"
+                    alt="IMG"
+                  />
+                  <img
+                    id="fromIMGThird"
+                    class="fromIMG third"
+                    src="{{ url_for('core_bp.static', filename='images/imgFrom2.png') }}"
+                    alt="IMG"
+                  />
+                </div>
+              </div>
+              <div class="textBox">
+                <p id="textParagraph" class="describerText f">
+                  Discover the power while scrolling in this section...
+                </p>
+                <button class="btn3">Create</button>
+              </div>
+
+              <div class="fromThisToThis_element">
+                <h2 class="fromThisToThisHeadline title">TO THIS</h2>
+                <div class="imgs">
+                  <img
+                    id="toIMGFirst"
+                    class="toIMG first"
+                    src="{{ url_for('core_bp.static', filename='images/imgFrom0.png') }}"
+                    alt="IMG"
+                  />
+                  <img
+                    id="toIMGSecond"
+                    class="toIMG second"
+                    src="{{ url_for('core_bp.static', filename='images/imgFrom1.png') }}"
+                    alt="IMG"
+                  />
+                  <img
+                    id="toIMGThird"
+                    class="toIMG third"
+                    src="{{ url_for('core_bp.static', filename='images/imgFrom2.png') }}"
+                    alt="IMG"
+                  />
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+      </article>
+
+      <!-- Background dots -->
+      <div class="dot1"></div>
+      <div class="dot2"></div>
+      <div class="dot3"></div>
+      <div class="dot4"></div>
+      <div class="dot5"></div>
+
+      <!-- return to top button -->
+      <a id="toTopBTN" href="#" class="toTopBTN"
+        ><i class="fa-solid fa-arrow-up"></i
+      ></a>
+    </main>
+
+   <footer class="footer">
+      <div class="logoSection">
+        <a class="navlogo footerLogo" href="#">WaterMark Studio</a>
+        <span class="rights"
+          >Copyright © 2023 WaterMark Studio All Rights Reserved.</span
+        >
+      </div>
+
+      <div class="footerLinks">
+        <div class="footerGroup">
+          <p class="footerTitle">Pages</p>
+          <ul class="navlinkwrap">
+            <li href="/" class="navlink small">Home</li>
+            <li href="#" class="navlink small underBuild">My Profile</li>
+            <li href="#" class="navlink small underBuild">About</li>
+            <li href="#" class="navlink small underBuild">Contact us</li>
+          </ul>
+        </div>
+
+        <div class="footerGroup">
+          <p class="footerTitle">Media</p>
+          <ul class="navlinkwrap">
+            <li href="#" class="navlink small">Facebook</li>
+            <li href="https://www.instagram.com/wmarkstudio" class="navlink small">Instagram</li>
+            <li href="#" class="navlink small">YouTube</li>
+            <li href="#" class="navlink small">Twitter</li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <div id="loader" class="lds-hourglass"></div>
+    <script src="{{ url_for('core_bp.static', filename='loading.js') }}"></script>
+    <script src="{{ url_for('core_bp.static', filename='global.js') }}"></script>
+    <script src="{{ url_for('core_bp.static', filename='windowInteractions.js') }}"></script>
+    <script src="{{ url_for('core_bp.static', filename='header.js') }}"></script>
+  </body>
+</html>
+
