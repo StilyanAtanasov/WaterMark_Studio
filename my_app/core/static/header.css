@@ -8,19 +8,22 @@
   src: url(Poppins/Poppins-Regular.ttf);
 }
 
-.navbar {
+#navbar {
+  width: 100vw;
+}
+
+header-element {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding: 2rem 4rem;
-  width: 100%;
   box-shadow: 0px 0px 0px 0px rgba(0, 255, 255, 0.7);
   transition: all 200ms ease;
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
 
-.navbar:hover {
+header-element:hover {
   box-shadow: 0px 10px 20px 2px rgba(0, 255, 255, 0.7);
 }
 
@@ -313,16 +316,16 @@ input {
   transform: rotate(-45deg) translateX(0.7rem);
 }
 
-#navbar.action .dropdown,
-#navbar.action a.navlogo {
+header-element.action .dropdown,
+header-element.action a.navlogo {
   transform: translateY(-30vh);
   animation-name: diasappear;
   animation-duration: 200ms;
   animation-fill-mode: forwards;
 }
 
-#navbar.action .navWrap,
-#navbar.action .logoutContainer {
+header-element.action .navWrap,
+header-element.action .logoutContainer {
   transform: translate(0);
   display: block;
 }
@@ -385,7 +388,7 @@ input {
 }
 
 @media only screen and (max-width: 350px) {
-  .navbar {
+  header-element {
     width: 100vw;
     padding: 1rem 2rem;
   }
