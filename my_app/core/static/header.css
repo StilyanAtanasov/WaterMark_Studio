@@ -110,8 +110,7 @@ header-element:hover {
   cursor: pointer;
 }
 
-.dropdown__items,
-.dropdownMenu {
+.dropdown__items {
   margin: 0;
   position: absolute;
   right: 0;
@@ -132,6 +131,12 @@ header-element:hover {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.dropdown__items.active {
+  visibility: visible;
+  opacity: 1;
+  top: calc(100% + 25px);
 }
 
 .buttonwrap {

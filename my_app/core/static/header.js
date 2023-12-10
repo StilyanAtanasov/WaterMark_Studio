@@ -1,7 +1,7 @@
 "use strict";
 
 // Header HTML
-class Info extends HTMLElement {
+class Header extends HTMLElement {
   connectedCallback() {
     const defaultStyle = {
       HomeLinkClass: "",
@@ -31,7 +31,7 @@ class Info extends HTMLElement {
     </div>
     <div class="sidebar">
       <div class="dropdown">
-        <label id="dropdown__face" class="dropdown__face" htmlFor="dropdown">
+        <label id="dropdown__face" class="dropdown__face" onclick="toggleDropdown()" htmlFor="dropdown">
           <div class="buttonwrap">
             <span class="dropdown__text navlogo">CREATE </span>
             <i class="fa-solid fa-chevron-down"></i>
@@ -56,7 +56,7 @@ class Info extends HTMLElement {
 }
 
 // Define the custom element
-customElements.define("header-element", Info);
+customElements.define("header-element", Header);
 
 // Open-Close animation
 let bar1 = document.getElementById("bar1");
@@ -80,19 +80,7 @@ document.getElementById("bars").onclick = function () {
   }
 };
 
-// Header Menu
-
-let createBTN = document.getElementById("dropdown__face");
-let items = document.getElementById("dropdown__items");
-
-createBTN.onclick = function () {
-  if (items.style.opacity === "1") {
-    items.style.visibility = "hidden";
-    items.style.opacity = "0";
-    items.style.top = "50%";
-  } else {
-    items.style.visibility = "visible";
-    items.style.opacity = "1";
-    items.style.top = "calc(100% + 25px)";
-  }
-};
+function toggleDropdown() {
+  let dropdownItems = document.getElementById("dropdown__items");
+  dropdownItems.classList.toggle("active");
+}

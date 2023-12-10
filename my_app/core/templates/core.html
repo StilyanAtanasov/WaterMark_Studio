@@ -37,7 +37,7 @@
     <link
       rel="stylesheet"
       type="text/css"
-      href="{{ url_for('core_bp.static', filename='RegisterMedia.css') }}"
+      href="{{ url_for('core_bp.static', filename='media.css') }}"
     />
     <link
       rel="stylesheet"
@@ -188,51 +188,31 @@
       ></a>
     </main>
 
-    <footer class="footer">
-      <div class="logoSection">
-        <a class="navlogo footerLogo" href="#">WaterMark Studio</a>
-        <span class="rights"
-          >Copyright © 2023 WaterMark Studio All Rights Reserved.</span
-        >
-      </div>
-
-      <div class="footerLinks">
-        <div class="footerGroup">
-          <p class="footerTitle">Pages</p>
-          <ul class="navlinkwrap">
-            <li href="/" class="navlink small">Home</li>
-            <li href="#" class="navlink small underBuild">My Profile</li>
-            <li href="#" class="navlink small underBuild">About</li>
-            <li href="#" class="navlink small underBuild">Contact us</li>
-          </ul>
-        </div>
-
-        <div class="footerGroup">
-          <p class="footerTitle">Media</p>
-          <ul class="navlinkwrap">
-            <li href="#" class="navlink small">Facebook</li>
-            <li
-              href="https://www.instagram.com/wmarkstudio"
-              class="navlink small"
-            >
-              Instagram
-            </li>
-            <li href="#" class="navlink small">YouTube</li>
-            <li href="#" class="navlink small">Twitter</li>
-          </ul>
-        </div>
-      </div>
-    </footer>
+    <footer id="footer" class="footer"></footer>
     <div id="loader" class="lds-hourglass"></div>
     <script src="{{ url_for('core_bp.static', filename='loading.js') }}"></script>
     <script src="{{ url_for('core_bp.static', filename='global.js') }}"></script>
     <script src="{{ url_for('core_bp.static', filename='windowInteractions.js') }}"></script>
     <script src="{{ url_for('core_bp.static', filename='header.js') }}"></script>
+    <script src="{{ url_for('core_bp.static', filename='footer.js') }}"></script>
     <script>
-      const infoElement2 = document.createElement("header-element");
-      const customStyle = { HomeLinkClass: "selectedlink" };
-      infoElement2.setAttribute("custom-style", JSON.stringify(customStyle));
-      document.getElementById("navbar").appendChild(infoElement2);
+      // Append header
+      const headerElement = document.createElement("header-element");
+      const customStyleHeader = { HomeLinkClass: "selectedlink" };
+      headerElement.setAttribute(
+        "custom-style",
+        JSON.stringify(customStyleHeader)
+      );
+      document.getElementById("navbar").appendChild(headerElement);
+
+      // Append footer
+      const footerElement = document.createElement("footer-element");
+      const customStyleFooter = { HomeLinkClass: "selectedlink" };
+      footerElement.setAttribute(
+        "custom-style",
+        JSON.stringify(customStyleFooter)
+      );
+      document.getElementById("footer").appendChild(footerElement);
     </script>
   </body>
 </html>
