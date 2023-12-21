@@ -1,0 +1,24 @@
+.submit {
+  background-color: #08d;
+  border-radius: 0.7rem;
+  border: 0;
+  box-sizing: border-box;
+  color: #eee;
+  cursor: pointer;
+  font-size: 1.3rem;
+  height: 3.5rem;
+  margin-top: 2rem;
+  outline: 0;
+  text-align: center;
+  width: 100%;
+  transition: all 250ms linear;
+}
+
+.submit:hover {
+  background-color: #06b;
+  color: #00eeff;
+}
+
+.submit:active {
+  background-color: #000118;
+}

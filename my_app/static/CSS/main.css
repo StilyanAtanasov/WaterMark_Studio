@@ -1,0 +1,17 @@
+/* Base */
+@import "./base/reset.css";
+@import "./base/globalMedia.css";
+
+/* Components */
+@import "./components/global.css";
+
+/* Layout */
+@import "./layouts/header.css";
+@import "./layouts/footer.css";
+@import "./layouts/loader.css";
+
+/* Pages */
+@import "./pages/core.css";
+
+/* Utils */
+@import "./utils/fonts.css";

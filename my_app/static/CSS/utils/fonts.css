@@ -1,0 +1,14 @@
+@font-face {
+  font-family: Poppins;
+  src: url(./Poppins/Poppins-Bold.ttf);
+}
+
+@font-face {
+  font-family: Poppins-regular;
+  src: url(./Poppins/Poppins-Regular.ttf);
+}
+
+@font-face {
+  font-family: Playfair_Display;
+  src: url(./Playfair_Display/PlayfairDisplay-BoldItalic.ttf);
+}

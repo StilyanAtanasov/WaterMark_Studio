@@ -1,18 +1,3 @@
-@font-face {
-  font-family: Poppins;
-  src: url(Poppins/Poppins-Bold.ttf);
-}
-
-@font-face {
-  font-family: Poppins-regular;
-  src: url(Poppins/Poppins-Regular.ttf);
-}
-
-@font-face {
-  font-family: Playfair_Display;
-  src: url(Playfair_Display/PlayfairDisplay-BoldItalic.ttf);
-}
-
 *,
 *::before,
 *::after {
@@ -95,7 +80,7 @@ main {
   font-weight: 300;
   font-style: italic;
   font-size: 1.5em;
-  margin-top: -1em;
+  margin-bottom: 1rem;
   text-shadow: 0 0 25px blue, 0 0 5px darkblue;
 }
 

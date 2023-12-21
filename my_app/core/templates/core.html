@@ -11,43 +11,10 @@
     />
     <link
       rel="stylesheet"
-      type="text/css"
-      href="{{ url_for('core_bp.static', filename='loader.css') }}"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{{ url_for('core_bp.static', filename='header.css') }}"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{{ url_for('core_bp.static', filename='core.css') }}"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{{ url_for('core_bp.static', filename='global.css') }}"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{{ url_for('core_bp.static', filename='CoreMedia.css') }}"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{{ url_for('core_bp.static', filename='media.css') }}"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{{ url_for('core_bp.static', filename='footer.css') }}"
-    />
-    <link
-      rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
+
+    <link rel="stylesheet" href="../../static/CSS/main.css" />
   </head>
   <body>
     <header id="navbar" class="navbar"></header>
@@ -196,6 +163,12 @@
     <script src="{{ url_for('core_bp.static', filename='windowInteractions.js') }}"></script>
     <script src="{{ url_for('core_bp.static', filename='header.js') }}"></script>
     <script src="{{ url_for('core_bp.static', filename='footer.js') }}"></script>
+
+    <script src="../static/loading.js"></script>
+    <script src="../static/global.js"></script>
+    <script src="../static/windowInteractions.js"></script>
+    <script src="../static/header.js"></script>
+    <script src="../static/footer.js"></script>
     <script>
       // Append header
       const headerElement = document.createElement("header-element");
