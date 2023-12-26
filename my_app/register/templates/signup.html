@@ -36,8 +36,12 @@
       type="text/css"
       href="{{ url_for('core_bp.static', filename='global.css') }}"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
     <link rel="stylesheet" href="../../static/CSS/main.css" />
-    <link rel="stylesheet" href="../static/register.css" />
+    <link rel="stylesheet" href="../../static/CSS/pages/register.css" />
   </head>
   <body>
     <div class="grid">
@@ -142,11 +146,7 @@
 
           <!-- Icon -->
           <div class="fadeIn first">
-            <img
-              src="{{ url_for('registration_bp.static', filename = 'user.png') }}"
-              id="icon"
-              alt="User Icon"
-            />
+            <i class="fa-solid fa-circle-user userIcon"></i>
           </div>
 
           <!-- SignUp Form -->

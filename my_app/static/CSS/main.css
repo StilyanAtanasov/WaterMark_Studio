@@ -12,7 +12,6 @@
 
 /* Pages */
 @import "./pages/core.css";
-@import "./pages/login.css";
 
 /* Utils */
 @import "./utils/fonts.css";

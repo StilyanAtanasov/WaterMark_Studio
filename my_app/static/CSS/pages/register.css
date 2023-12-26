@@ -50,6 +50,12 @@ img {
   border: 1px solid #bcbcbc;
 }
 
+.userIcon {
+  font-size: 10rem;
+  margin: 1rem 0;
+  color: #cccccc;
+}
+
 /* TABS */
 
 h2.inactive {
@@ -172,25 +178,12 @@ html {
   scrollbar-width: none; /* Firefox */
 }
 
-.imgInput::file-selector-button {
-  font-weight: bold;
-  color: dodgerblue;
-  padding: 0.5em;
-  border: thin solid grey;
-  border-radius: 3px;
-  margin: 1em;
-}
-
-.imgInput::file-selector-button:hover {
-  cursor: pointer;
-}
-
 .wrapper {
   display: flex;
   align-items: center;
   flex-direction: column;
   padding: 1.3rem;
-  top: 20%;
+  top: 10%;
   position: absolute;
   left: 0;
   width: 100vw;
