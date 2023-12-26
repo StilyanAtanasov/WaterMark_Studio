@@ -4,8 +4,6 @@
 
 html {
   background-color: rgba(39, 37, 37, 0.911);
-  margin-top: -44.5rem;
-  padding-top: 1.4rem;
   height: 100vh;
 }
 
@@ -42,9 +40,8 @@ img {
 #formContent {
   -webkit-border-radius: 10px;
   border-radius: 10px;
+  width: 30rem;
   background: #fff;
-  width: 90%;
-  max-width: 30rem;
   padding: 0px;
   -webkit-box-shadow: 0 2rem 4rem 0 rgba(0, 0, 0, 0.3);
   box-shadow: 0 2rem 4rem 0 rgba(0, 0, 0, 0.3);
@@ -193,8 +190,10 @@ html {
   align-items: center;
   flex-direction: column;
   padding: 1.3rem;
-  position: sticky;
-  top: 15%;
+  top: 20%;
+  position: absolute;
+  left: 0;
+  width: 100vw;
 }
 
 .submitBTN:hover {
@@ -378,7 +377,7 @@ html {
 @media screen and (max-height: 800px) {
   .wrapper {
     scale: 0.6;
-    top: 0%;
+    top: 10%;
   }
 }
 

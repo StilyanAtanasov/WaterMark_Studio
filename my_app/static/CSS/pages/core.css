@@ -1,26 +1,16 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-html {
+#coreHTML {
   width: 100vw;
   height: 100vh;
   font-family: Poppins;
   font-size: 100%;
 }
 
-a {
-  text-decoration: none;
-}
-
-html,
-body {
+#coreHTML,
+#coreBody {
   scroll-behavior: smooth;
 }
 
-body {
+#coreBody {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
@@ -33,25 +23,25 @@ body {
   overflow: hidden;
 }
 
-html {
+#coreHTML {
   overflow-x: hidden;
   white-space: nowrap;
 }
 
 /* Hide vertical scrollbar for Chrome, Safari and Opera */
-html::-webkit-scrollbar {
+#coreHTML::-webkit-scrollbar {
   display: none;
 }
 
 /* Hide vertical scrollbar for IE, Edge and Firefox */
-html {
+#coreHTML {
   -ms-overflow-style: none; /* IE and Edge */
   scrollbar-width: none; /* Firefox */
 }
 
 /* Description */
 
-main {
+#coreMain {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -938,18 +928,18 @@ p {
 /* Overall view */
 
 @media only screen {
-  html,
-  body {
+  #coreHTML,
+  #coreBody {
     overflow-x: hidden;
   }
-  body {
+  #coreBody {
     position: relative;
   }
 }
 
 /* Description */
 @media only screen and (max-width: 650px) {
-  html {
+  #coreHTML {
     font-size: 6px;
   }
 

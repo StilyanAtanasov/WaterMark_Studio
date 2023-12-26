@@ -40,7 +40,7 @@ for (let index = 0; index < imagesNeeded; index++) {
 for (let index = 0; index < imagesNeeded; index++)
   document.getElementById(
     `img` + index
-  ).src = `../register/static/images/${imagesSelected[index]}.png`;
+  ).src = `../static/images/${imagesSelected[index]}.png`;
 
 for (let index = imagesNeeded + 1; index <= 30; index++) {
   let item = document.getElementById(`img` + index);
