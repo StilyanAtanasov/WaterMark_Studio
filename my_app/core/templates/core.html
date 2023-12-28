@@ -17,10 +17,14 @@
     <link rel="stylesheet" href="../../static/CSS/main.css" />
   </head>
   <body id="coreBody">
+    <!-----Header----->
     <header id="navbar" class="navbar"></header>
+
+    <!-----Main----->
     <main id="coreMain">
-      <div class="box">
-        <div class="infobox">
+      <!-- Splash screen -->
+      <div class="splashScreen">
+        <div class="splashScreen__mainDescription">
           <p class="title low">
             Unleash the Power of Invisible Watermarking! Protect Your Images
             with the Invisible Shield
@@ -31,16 +35,23 @@
             your visual assets, secure your brand, and deter unauthorized use
             like never before.
           </p>
-          <div class="infobox-btnwrapper">
-            <button class="infobox-explorebtn">Explore</button>
-            <button id="selected" class="infobox-createbtn selected">
+          <div class="splashScreen__mainDescription_navButtonsBox">
+            <button
+              class="splashScreen__mainDescription_navButtonsBox-explorebtn"
+            >
+              Explore
+            </button>
+            <button
+              id="selected"
+              class="splashScreen__mainDescription_navButtonsBox-createbtn selected"
+            >
               Create
             </button>
           </div>
         </div>
         <div class="display">
           <img
-            src="{{ url_for('core_bp.static', filename = 'images/Watermarking logo final2.png') }}"
+            src="../static/images/Watermarking logo final2.png"
             alt="Logo IMG"
           />
         </div>

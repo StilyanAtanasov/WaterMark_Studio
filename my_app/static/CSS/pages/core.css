@@ -1,3 +1,5 @@
+/* ----------------------- Main design -----------------------*/
+
 #coreHTML {
   width: 100vw;
   height: 100vh;
@@ -39,23 +41,7 @@
   scrollbar-width: none; /* Firefox */
 }
 
-/* Description */
-
-#coreMain {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-#desc {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 80vw;
-  margin-top: 3rem;
-}
+/* ----------------------- Reused styles -----------------------*/
 
 .title {
   font-family: Poppins;
@@ -72,35 +58,6 @@
   font-size: 1.5em;
   margin-bottom: 1rem;
   text-shadow: 0 0 25px blue, 0 0 5px darkblue;
-}
-
-.text {
-  font-family: Poppins;
-  font-weight: 100;
-  font-size: 1em;
-  margin-top: -0.8em;
-  text-align: center;
-  text-shadow: 0 0 5px darkblue;
-}
-
-.ol {
-  text-align: start;
-}
-
-.box {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-shrink: 2;
-  white-space: initial;
-  margin: 7rem 4rem 20rem 4rem;
-  align-items: center;
-}
-
-.infobox {
-  animation-name: leftslide;
-  animation-duration: 0.8s;
-  max-width: 50%;
 }
 
 .selected {
@@ -129,11 +86,79 @@
   animation-timing-function: linear;
 }
 
-.selectedtext {
-  animation-name: selectedRotateAnimation;
-  animation-iteration-count: infinite;
-  animation-duration: 5s;
-  background-clip: text;
+/* ----------------------- Splash screen -----------------------*/
+
+#coreMain {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#desc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 80vw;
+  margin-top: 3rem;
+}
+
+.text {
+  font-family: Poppins;
+  font-weight: 100;
+  font-size: 1em;
+  margin-top: -0.8em;
+  text-align: center;
+  text-shadow: 0 0 5px darkblue;
+}
+
+.splashScreen {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-shrink: 2;
+  white-space: initial;
+  margin: 7rem 4rem 20rem 4rem;
+  align-items: center;
+}
+
+.splashScreen__mainDescription {
+  animation-name: leftslide;
+  animation-duration: 0.8s;
+  max-width: 50%;
+}
+
+.splashScreen__mainDescription_navButtonsBox {
+  display: flex;
+}
+
+.splashScreen__mainDescription_navButtonsBox-createbtn,
+.splashScreen__mainDescription_navButtonsBox-explorebtn {
+  font-family: "Poppins";
+  font-style: normal;
+  font-size: 1.2rem;
+  letter-spacing: -1px;
+  color: #ffffff;
+  padding: 0.6rem 3rem;
+  cursor: pointer;
+  border-radius: 30px;
+  letter-spacing: 0.1px;
+  transition: all 300ms linear;
+}
+
+.splashScreen__mainDescription_navButtonsBox-explorebtn {
+  background-color: #009bf5ef;
+}
+
+.splashScreen__mainDescription_navButtonsBox-explorebtn:hover {
+  background-color: #0010f5af;
+}
+
+.splashScreen__mainDescription_navButtonsBox-createbtn {
+  margin-left: 20px;
+  background-color: transparent;
+  border: 1px solid #d7d7d7;
 }
 
 .display {
@@ -156,38 +181,6 @@
   height: 100%;
   background-size: cover;
   background-position: center;
-}
-
-.infobox-createbtn,
-.infobox-explorebtn {
-  font-family: "Poppins";
-  font-style: normal;
-  font-size: 1.2rem;
-  letter-spacing: -1px;
-  color: #ffffff;
-  padding: 0.6rem 3rem;
-  cursor: pointer;
-  border-radius: 30px;
-  letter-spacing: 0.1px;
-  transition: all 300ms linear;
-}
-
-.infobox-createbtn {
-  margin-left: 20px;
-  background-color: transparent;
-  border: 1px solid #d7d7d7;
-}
-
-.infobox-explorebtn {
-  background-color: #009bf5ef;
-}
-
-.infobox-explorebtn:hover {
-  background-color: #0010f5af;
-}
-
-.infobox-btnwrapper {
-  display: flex;
 }
 
 /* Started */
@@ -943,7 +936,7 @@ p {
     font-size: 6px;
   }
 
-  .box {
+  .splashScreen {
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -960,18 +953,18 @@ p {
     height: 50rem;
   }
 
-  .infobox {
+  .splashScreen__mainDescription {
     max-width: 90%;
     text-align: center;
   }
 
-  .infobox-btnwrapper {
+  .splashScreen__mainDescription_navButtonsBox {
     align-items: center;
     justify-content: center;
   }
 
-  .infobox-createbtn,
-  .infobox-explorebtn {
+  .splashScreen__mainDescription_navButtonsBox-createbtn,
+  .splashScreen__mainDescription_navButtonsBox-explorebtn {
     font-size: 2rem;
     padding: 1rem 4rem;
   }
