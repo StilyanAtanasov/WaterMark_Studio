@@ -1,0 +1,14 @@
+{
+  "name": "watermark_studio",
+  "version": "1.0.0-b.2",
+  "description": "",
+  "main": "./my_app/__init__.py",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Stilyan Atanasov and Teodor Todorov",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "node-sass": "^9.0.0"
+  }
+}

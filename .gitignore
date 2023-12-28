@@ -1,5 +1,6 @@
-# Ignore the .idea folder
+# Ignore the .idea and node_modules folder
 .idea/
+node_modules
 
 #### except
 
