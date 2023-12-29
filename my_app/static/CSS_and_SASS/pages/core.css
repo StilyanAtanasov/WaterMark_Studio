@@ -1,5 +1,4 @@
 /* ----------------------- Main design -----------------------*/
-
 #coreHTML {
   width: 100vw;
   height: 100vh;
@@ -37,12 +36,13 @@
 
 /* Hide vertical scrollbar for IE, Edge and Firefox */
 #coreHTML {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 /* ----------------------- Reused styles -----------------------*/
-
 .title {
   font-family: Poppins;
   font-weight: 600;
@@ -61,14 +61,7 @@
 }
 
 .selected {
-  background-image: linear-gradient(
-    to right,
-    #52009e,
-    #9b51e0,
-    rgba(48, 129, 237, 0.8),
-    #00f300,
-    #d9ff00b6
-  );
+  background-image: linear-gradient(to right, #52009e, #9b51e0, rgba(48, 129, 237, 0.8), #00f300, #d9ff00b6);
   background-size: 300%;
 }
 
@@ -87,7 +80,6 @@
 }
 
 /* ----------------------- Splash screen -----------------------*/
-
 #coreMain {
   display: flex;
   flex-direction: column;
@@ -161,7 +153,7 @@
   border: 1px solid #d7d7d7;
 }
 
-.display {
+.splashScreen__display {
   animation-name: rightslide;
   animation-duration: 0.8s;
   transform: rotate(4deg);
@@ -176,7 +168,7 @@
   right: 0%;
 }
 
-.display img {
+.splashScreen__display img {
   width: 100%;
   height: 100%;
   background-size: cover;
@@ -184,7 +176,6 @@
 }
 
 /* Started */
-
 .started {
   margin-top: 7rem;
   display: flex;
@@ -222,8 +213,7 @@
   border-radius: 1.5rem;
   background-color: red;
   background: rgba(255, 255, 255, 0.095);
-  box-shadow: inset 2px -2px 20px rgba(214, 214, 214, 0.17),
-    inset -3px 3px 3px rgba(255, 255, 255, 0.39);
+  box-shadow: inset 2px -2px 20px rgba(214, 214, 214, 0.17), inset -3px 3px 3px rgba(255, 255, 255, 0.39);
   backdrop-filter: blur(74px);
 }
 
@@ -269,7 +259,6 @@
 }
 
 /* To top button */
-
 .toTopBTN {
   width: calc(100vw / 30);
   height: calc(100vw / 30);
@@ -323,7 +312,6 @@ p {
 }
 
 /* From this to this section */
-
 .emptyScroller {
   margin-top: 10rem;
   overflow: scroll;
@@ -341,8 +329,10 @@ p {
 
 /* Hide vertical scrollbar for IE, Edge and Firefox */
 .emptyScroller {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 .whyChoose {
@@ -500,7 +490,6 @@ p {
 }
 
 /* ----------------------------------------- Background -----------------------------------------*/
-
 .dot1,
 .dot2,
 .dot3,
@@ -572,7 +561,6 @@ p {
 }
 
 /* ---------------------------------ANIMATIONS--------------------------------- */
-
 @keyframes animateDot1 {
   0% {
     filter: blur(3.5rem);
@@ -641,7 +629,6 @@ p {
     height: 3rem;
     background-color: #27a807;
   }
-
   75% {
     left: 18%;
     top: 34rem;
@@ -875,30 +862,23 @@ p {
 }
 
 /* ----------------------------- MEDIA -------------------------------------- */
-
 /* Making Background responsive */
-
 @media only screen and (max-width: 700px) {
   .dot1 {
     top: 9.2rem;
   }
-
   .dot2 {
     top: 20rem;
   }
-
   .dot3 {
     top: 50rem;
   }
-
   .dot4 {
     top: 70rem;
   }
-
   .dot5 {
     top: 120rem;
   }
-
   @keyframes animateDot2 {
     0% {
       top: 20rem;
@@ -919,7 +899,6 @@ p {
 }
 
 /* Overall view */
-
 @media only screen {
   #coreHTML,
   #coreBody {
@@ -935,48 +914,41 @@ p {
   #coreHTML {
     font-size: 6px;
   }
-
   .splashScreen {
     flex-direction: column;
     justify-content: center;
     align-items: center;
     max-width: 90vw;
   }
-
   .subtitle {
     font-size: 1.5em;
   }
-
-  .display {
+  .splashScreen__display {
     margin-top: 5rem;
     width: 50rem;
     height: 50rem;
   }
-
   .splashScreen__mainDescription {
     max-width: 90%;
     text-align: center;
   }
-
   .splashScreen__mainDescription_navButtonsBox {
     align-items: center;
     justify-content: center;
   }
-
   .splashScreen__mainDescription_navButtonsBox-createbtn,
   .splashScreen__mainDescription_navButtonsBox-explorebtn {
     font-size: 2rem;
     padding: 1rem 4rem;
   }
-
-  .display {
+  .splashScreen__display {
     max-width: 50rem;
     max-height: 50rem;
   }
 }
 
 @media only screen and (max-width: 350px) {
-  .display {
+  .splashScreen__display {
     max-width: 40rem;
     max-height: 40rem;
   }
@@ -987,16 +959,13 @@ p {
   .started-items {
     grid-template-columns: repeat(1, 80vw);
   }
-
   .started-items-item {
     width: 35vw;
     height: 35vw;
   }
-
   .started-items-item * {
     font-size: calc(100vw / 10);
   }
-
   .started-items-item::before {
     content: "";
     background-color: blue;
@@ -1005,20 +974,16 @@ p {
     height: calc(100vw / 5);
     position: absolute;
   }
-
   .itemwrapper:not(:last-child) {
     margin-bottom: calc(100vw / 10);
   }
-
   .itemwrapper p {
     font-size: calc(100vw / 25);
     width: 100%;
   }
-
   .started {
     margin: calc(100vw / 1.5) 0 calc(100vw / 1.5) 0;
   }
-
   .started > .title {
     font-size: calc(100vw / 20);
   }
@@ -1029,34 +994,28 @@ p {
   .fromThisToThis_section {
     flex-direction: column;
   }
-
   .whyChoose > .title {
     font-size: calc(100vw / 22);
   }
-
   .fromThisToThis_element {
     height: calc(100vh / 4);
     max-width: 80vw;
   }
-
   .fromIMG,
   .toIMG {
     height: calc(100vh / 4);
     max-width: 80vw;
     width: auto;
   }
-
   .imgs {
     height: calc(100vh / 4);
     display: flex;
     justify-content: center;
   }
-
   .textBox {
     height: calc(100vh / 5);
     width: 80vw;
   }
-
   #textParagraph {
     margin-top: 10rem;
     max-width: 80vw;
@@ -1065,7 +1024,6 @@ p {
 }
 
 /* To top button */
-
 @media only screen and (max-width: 550px) {
   .toTopBTN {
     width: calc(100vw / 15);

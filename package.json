@@ -2,9 +2,10 @@
   "name": "watermark_studio",
   "version": "1.0.0-b.2",
   "description": "",
-  "main": "./my_app/__init__.py",
+  "main": "my_app/__init__.py",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile:sass:development": "node-sass --watch --no-source-map --output-style=expanded my_app/static/CSS_and_SASS -o my_app/static/CSS_and_SASS",
+    "compile:sass:production": "node-sass --output-style=compressed my_app/static/CSS_and_SASS -o my_app/static/CSS_and_SASS"
   },
   "author": "Stilyan Atanasov and Teodor Todorov",
   "license": "Apache-2.0",
