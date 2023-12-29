@@ -17,7 +17,7 @@
 /* ----------------------------------- Fonts ----------------------------------- */
 @import url(./utils/fonts.css);
 /* ----------------------------------- Placeholders ----------------------------------- */
-.splashScreen__mainDescription_navButtonsBox--explorebtn, .splashScreen__mainDescription_navButtonsBox--createbtn {
+.splashScreen__mainDescription_buttonBox--explorebtn, .splashScreen__mainDescription_buttonBox--createbtn {
   font-family: "Poppins";
   font-style: normal;
   font-size: 1.2rem;
@@ -148,20 +148,20 @@
   max-width: 50%;
 }
 
-.splashScreen__mainDescription_navButtonsBox {
+.splashScreen__mainDescription_buttonBox {
   display: flex;
 }
 
-.splashScreen__mainDescription_navButtonsBox--explorebtn {
+.splashScreen__mainDescription_buttonBox--explorebtn {
   background-color: #009bf5ef;
   border: 1px solid #d7d7d7;
 }
 
-.splashScreen__mainDescription_navButtonsBox--explorebtn:hover {
+.splashScreen__mainDescription_buttonBox--explorebtn:hover {
   background-color: #0010f5af;
 }
 
-.splashScreen__mainDescription_navButtonsBox--createbtn {
+.splashScreen__mainDescription_buttonBox--createbtn {
   margin-left: 1.5rem;
   background-color: transparent;
   border: 1px solid #d7d7d7;
@@ -174,81 +174,81 @@
   position: relative;
 }
 
-.splashScreen__mainDescription_navButtonsBox--createbtn:hover .splashScreen__mainDescription_navButtonsBox--createbtn-buttonText1 {
+.splashScreen__mainDescription_buttonBox--createbtn:hover .splashScreen__mainDescription_buttonBox--createbtn-buttonText1 {
   position: absolute;
 }
 
-.splashScreen__mainDescription_navButtonsBox--createbtn:hover .splashScreen__mainDescription_navButtonsBox--createbtn-buttonText1 span {
+.splashScreen__mainDescription_buttonBox--createbtn:hover .splashScreen__mainDescription_buttonBox--createbtn-buttonText1 span {
   transform: translateY(1.2em);
 }
 
-.splashScreen__mainDescription_navButtonsBox--createbtn-buttonText1 {
+.splashScreen__mainDescription_buttonBox--createbtn-buttonText1 {
   display: flex;
   position: absolute;
   top: 0.5em;
   overflow: hidden;
 }
 
-.splashScreen__mainDescription_navButtonsBox--createbtn-buttonText1 span:nth-child(1) {
+.splashScreen__mainDescription_buttonBox--createbtn-buttonText1 span:nth-child(1) {
   transition: 0.2s;
 }
 
-.splashScreen__mainDescription_navButtonsBox--createbtn-buttonText1 span:nth-child(2) {
+.splashScreen__mainDescription_buttonBox--createbtn-buttonText1 span:nth-child(2) {
   transition: 0.3s;
 }
 
-.splashScreen__mainDescription_navButtonsBox--createbtn-buttonText1 span:nth-child(3) {
+.splashScreen__mainDescription_buttonBox--createbtn-buttonText1 span:nth-child(3) {
   transition: 0.4s;
 }
 
-.splashScreen__mainDescription_navButtonsBox--createbtn-buttonText1 span:nth-child(4) {
+.splashScreen__mainDescription_buttonBox--createbtn-buttonText1 span:nth-child(4) {
   transition: 0.5s;
 }
 
-.splashScreen__mainDescription_navButtonsBox--createbtn-buttonText1 span:nth-child(5) {
+.splashScreen__mainDescription_buttonBox--createbtn-buttonText1 span:nth-child(5) {
   transition: 0.6s;
 }
 
-.splashScreen__mainDescription_navButtonsBox--createbtn-buttonText1 span:nth-child(6) {
+.splashScreen__mainDescription_buttonBox--createbtn-buttonText1 span:nth-child(6) {
   transition: 0.7s;
 }
 
-.splashScreen__mainDescription_navButtonsBox--createbtn-buttonText2 {
+.splashScreen__mainDescription_buttonBox--createbtn-buttonText2 {
   display: flex;
   position: absolute;
   top: 0.5em;
   overflow: hidden;
 }
 
-.splashScreen__mainDescription_navButtonsBox--createbtn-buttonText2 span {
+.splashScreen__mainDescription_buttonBox--createbtn-buttonText2 span {
   transform: translateY(-1.2em);
 }
 
-.splashScreen__mainDescription_navButtonsBox--createbtn-buttonText2 span {
+.splashScreen__mainDescription_buttonBox--createbtn-buttonText2 span {
   transition: 0.2s;
 }
 
-.splashScreen__mainDescription_navButtonsBox--createbtn-buttonText2 span:nth-child(2) {
+.splashScreen__mainDescription_buttonBox--createbtn-buttonText2 span:nth-child(2) {
   transition: 0.3s;
 }
 
-.splashScreen__mainDescription_navButtonsBox--createbtn-buttonText2 span:nth-child(3) {
+.splashScreen__mainDescription_buttonBox--createbtn-buttonText2 span:nth-child(3) {
   transition: 0.4s;
 }
 
-.splashScreen__mainDescription_navButtonsBox--createbtn-buttonText2 span:nth-child(4) {
+.splashScreen__mainDescription_buttonBox--createbtn-buttonText2 span:nth-child(4) {
   transition: 0.5s;
 }
 
-.splashScreen__mainDescription_navButtonsBox--createbtn-buttonText2 span:nth-child(5) {
+.splashScreen__mainDescription_buttonBox--createbtn-buttonText2 span:nth-child(5) {
   transition: 0.6s;
 }
 
-.splashScreen__mainDescription_navButtonsBox--createbtn-buttonText2 span:nth-child(6) {
+.splashScreen__mainDescription_buttonBox--createbtn-buttonText2 span:nth-child(6) {
   transition: 0.7s;
 }
 
-.splashScreen__mainDescription_navButtonsBox--createbtn:hover .splashScreen__mainDescription_navButtonsBox--createbtn-buttonText2 span {
+.splashScreen__mainDescription_buttonBox--createbtn:hover .splashScreen__mainDescription_buttonBox--createbtn-buttonText2 span {
   transform: translateY(0);
 }
 
@@ -1031,12 +1031,12 @@ p {
     max-width: 90%;
     text-align: center;
   }
-  .splashScreen__mainDescription_navButtonsBox {
+  .splashScreen__mainDescription_buttonBox {
     align-items: center;
     justify-content: center;
   }
-  .splashScreen__mainDescription_navButtonsBox-createbtn,
-  .splashScreen__mainDescription_navButtonsBox-explorebtn {
+  .splashScreen__mainDescription_buttonBox-createbtn,
+  .splashScreen__mainDescription_buttonBox-explorebtn {
     font-size: 2rem;
     padding: 1rem 4rem;
   }

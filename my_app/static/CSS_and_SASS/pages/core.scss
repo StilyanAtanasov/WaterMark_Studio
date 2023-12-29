@@ -117,7 +117,7 @@
     animation-duration: 0.8s;
     max-width: 50%;
 
-    &_navButtonsBox {
+    &_buttonBox {
       display: flex;
 
       &--explorebtn {
@@ -144,7 +144,7 @@
         position: relative;
 
         &:hover
-          .splashScreen__mainDescription_navButtonsBox--createbtn-buttonText1 {
+          .splashScreen__mainDescription_buttonBox--createbtn-buttonText1 {
           position: absolute;
 
           span {
@@ -219,7 +219,7 @@
         }
 
         &:hover
-          .splashScreen__mainDescription_navButtonsBox--createbtn-buttonText2
+          .splashScreen__mainDescription_buttonBox--createbtn-buttonText2
           span {
           transform: translateY(0);
         }
@@ -1008,12 +1008,12 @@ p {
     max-width: 90%;
     text-align: center;
   }
-  .splashScreen__mainDescription_navButtonsBox {
+  .splashScreen__mainDescription_buttonBox {
     align-items: center;
     justify-content: center;
   }
-  .splashScreen__mainDescription_navButtonsBox-createbtn,
-  .splashScreen__mainDescription_navButtonsBox-explorebtn {
+  .splashScreen__mainDescription_buttonBox-createbtn,
+  .splashScreen__mainDescription_buttonBox-explorebtn {
     font-size: 2rem;
     padding: 1rem 4rem;
   }
