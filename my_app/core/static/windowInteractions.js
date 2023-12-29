@@ -1,3 +1,5 @@
+"use strict";
+
 // show static elements on scroll
 
 let scroll =
@@ -184,4 +186,15 @@ selectedBTN.onmouseleave = function () {
   if (selectedBTN.classList.contains("reverse"))
     selectedBTN.classList.remove("reverse");
   else selectedBTN.classList.add("reverse");
+};
+
+// explore button functionality
+
+let exploreBTN = document.getElementById("exploreBTN");
+
+exploreBTN.onclick = function () {
+  window.scrollTo({
+    top: scrollBox.offsetTop,
+    behavior: "auto",
+  });
 };
