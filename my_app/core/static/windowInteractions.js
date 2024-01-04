@@ -178,7 +178,7 @@ if (navigator.userAgent.includes("Mozilla") && browserName === "Firefox") {
   }
 }
 
-// selected button animation reverse
+// selected button animations
 
 let selectedBTN = document.getElementById("selected");
 
@@ -186,6 +186,25 @@ selectedBTN.onmouseleave = function () {
   if (selectedBTN.classList.contains("reverse"))
     selectedBTN.classList.remove("reverse");
   else selectedBTN.classList.add("reverse");
+};
+
+let createbtn_option1 = document.getElementById("createbtn-option1");
+let createbtn_option2 = document.getElementById("createbtn-option2");
+selectedBTN.onclick = function () {
+  if (
+    createbtn_option1.className ===
+    "splashScreen__mainDescription_buttonBox--createbtn-option-active"
+  ) {
+    createbtn_option1.className =
+      "splashScreen__mainDescription_buttonBox--createbtn-option-hide";
+    createbtn_option2.className =
+      "splashScreen__mainDescription_buttonBox--createbtn-option-hide";
+  } else {
+    createbtn_option1.className =
+      "splashScreen__mainDescription_buttonBox--createbtn-option-active";
+    createbtn_option2.className =
+      "splashScreen__mainDescription_buttonBox--createbtn-option-active";
+  }
 };
 
 // explore button functionality

@@ -218,6 +218,28 @@
           }
         }
 
+        &-option {
+          @extend %optionButtons;
+          scale: 0;
+          opacity: 0;
+          transform: translateX(-15rem);
+
+          &-active {
+            @extend %optionButtons;
+            animation-name: options;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+            animation-direction: reverse;
+          }
+
+          &-hide {
+            @extend %optionButtons;
+            animation-name: options;
+            animation-duration: 1s;
+            animation-fill-mode: forwards;
+          }
+        }
+
         &:hover
           .splashScreen__mainDescription_buttonBox--createbtn-buttonText2
           span {
@@ -248,6 +270,10 @@
       background-position: center;
     }
   }
+}
+
+#createbtn-option1 {
+  transition-delay: 100ms;
 }
 
 /* Started */
@@ -934,6 +960,26 @@ p {
   }
   100% {
     background-position: 100% 0;
+  }
+}
+
+@keyframes options {
+  0% {
+    opacity: 1;
+    scale: 1;
+    transform: translateX(0);
+  }
+  30% {
+    opacity: 0;
+  }
+  90% {
+    scale: 1;
+    transform: translateX(-14rem);
+  }
+  100% {
+    opacity: 0;
+    scale: 0;
+    transform: translateX(-15rem);
   }
 }
 
