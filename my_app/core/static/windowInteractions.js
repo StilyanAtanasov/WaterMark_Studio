@@ -179,7 +179,6 @@ if (navigator.userAgent.includes("Mozilla") && browserName === "Firefox") {
 }
 
 // selected button animations
-
 let selectedBTN = document.getElementById("selected");
 
 selectedBTN.onmouseleave = function () {
@@ -188,27 +187,15 @@ selectedBTN.onmouseleave = function () {
   else selectedBTN.classList.add("reverse");
 };
 
-let createbtn_option1 = document.getElementById("createbtn-option1");
-let createbtn_option2 = document.getElementById("createbtn-option2");
+let optionButtons = document.getElementById("optionButtons");
+
 selectedBTN.onclick = function () {
-  if (
-    createbtn_option1.className ===
-    "splashScreen__mainDescription_buttonBox--createbtn-option-active"
-  ) {
-    createbtn_option1.className =
-      "splashScreen__mainDescription_buttonBox--createbtn-option-hide";
-    createbtn_option2.className =
-      "splashScreen__mainDescription_buttonBox--createbtn-option-hide";
-  } else {
-    createbtn_option1.className =
-      "splashScreen__mainDescription_buttonBox--createbtn-option-active";
-    createbtn_option2.className =
-      "splashScreen__mainDescription_buttonBox--createbtn-option-active";
-  }
+  if (optionButtons.classList.contains("active"))
+    optionButtons.classList.remove("active");
+  else optionButtons.classList.add("active");
 };
 
 // explore button functionality
-
 let exploreBTN = document.getElementById("exploreBTN");
 
 exploreBTN.onclick = function () {

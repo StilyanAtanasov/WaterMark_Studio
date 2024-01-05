@@ -32,24 +32,6 @@
   height: 3.1rem;
 }
 
-.splashScreen__mainDescription_buttonBox--createbtn-option, .splashScreen__mainDescription_buttonBox--createbtn-option-active, .splashScreen__mainDescription_buttonBox--createbtn-option-hide {
-  padding: 1.2rem;
-  border-radius: 100%;
-  border: 0.1rem solid #007780;
-  background-color: #00eeff;
-  margin: 0 1rem;
-  width: 3rem;
-  height: 3rem;
-  color: #000118;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
-  font-size: 1.5rem;
-  transition: all 300ms ease-in-out;
-}
-
 /* ---------------------------------------------- Pages ---------------------------------------------- */
 /* ----------------------------------- Core ----------------------------------- */
 /* ----------------------- Main design -----------------------*/
@@ -266,27 +248,77 @@
   transition: 0.7s;
 }
 
-.splashScreen__mainDescription_buttonBox--createbtn-option {
-  scale: 0;
-  opacity: 0;
-  transform: translateX(-15rem);
-}
-
-.splashScreen__mainDescription_buttonBox--createbtn-option-active {
-  animation-name: options;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-  animation-direction: reverse;
-}
-
-.splashScreen__mainDescription_buttonBox--createbtn-option-hide {
-  animation-name: options;
-  animation-duration: 1s;
-  animation-fill-mode: forwards;
-}
-
 .splashScreen__mainDescription_buttonBox--createbtn:hover .splashScreen__mainDescription_buttonBox--createbtn-buttonText2 span {
   transform: translateY(0);
+}
+
+.splashScreen__mainDescription_buttonBox--optionButtons {
+  height: 0;
+  width: 0;
+  display: flex;
+}
+
+.splashScreen__mainDescription_buttonBox--optionButtons li {
+  position: relative;
+  opacity: 0;
+  margin: 0 0.5rem;
+  transition: all 0.4s;
+  transform: translateX(-350%) scale(0);
+}
+
+.splashScreen__mainDescription_buttonBox--optionButtons li a {
+  border-radius: 100%;
+  border: 0.1rem solid #007780;
+  background-color: #00eeff;
+  margin: 0 0.5rem;
+  width: 3rem;
+  height: 3rem;
+  color: #000118;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: all 300ms ease-in-out;
+  transform: translateY(-1rem);
+}
+
+.splashScreen__mainDescription_buttonBox--optionButtons li a span {
+  position: absolute;
+  top: 0;
+  font-size: 13px;
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.3s;
+  color: #ffffff;
+  text-align: center;
+  font-weight: bold;
+  transition: all 250ms linear;
+  transform: translateY(calc(-100% - 5px));
+}
+
+.splashScreen__mainDescription_buttonBox--optionButtons.active li {
+  opacity: 1;
+  transform: translateX(0) scale(1) translateY(50%);
+}
+
+.splashScreen__mainDescription_buttonBox--optionButtons.active li a span {
+  color: #ffffff;
+  opacity: 1;
+  transition-delay: 0.9s;
+}
+
+.splashScreen__mainDescription_buttonBox--optionButtons.active li a:hover {
+  color: #ffffff;
+  background-color: #0010f5af;
+  border: 0.1rem solid #d7d7d7;
+}
+
+.splashScreen__mainDescription_buttonBox--optionButtons.active li a:hover span {
+  color: #00eeff;
+  transition-delay: 0ms;
 }
 
 .splashScreen__display {
@@ -309,10 +341,6 @@
   height: 100%;
   background-size: cover;
   background-position: center;
-}
-
-#createbtn-option1 {
-  transition-delay: 100ms;
 }
 
 /* Started */
@@ -998,26 +1026,6 @@ p {
   }
   100% {
     background-position: 100% 0;
-  }
-}
-
-@keyframes options {
-  0% {
-    opacity: 1;
-    scale: 1;
-    transform: translateX(0);
-  }
-  30% {
-    opacity: 0;
-  }
-  90% {
-    scale: 1;
-    transform: translateX(-14rem);
-  }
-  100% {
-    opacity: 0;
-    scale: 0;
-    transform: translateX(-15rem);
   }
 }
 
