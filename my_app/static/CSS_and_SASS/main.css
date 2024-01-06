@@ -179,7 +179,7 @@
 }
 
 .splashScreen__mainDescription_buttonBox--createbtn:hover .splashScreen__mainDescription_buttonBox--createbtn-buttonText1 span {
-  transform: translateY(1.2em);
+  transform: translateY(3em);
 }
 
 .splashScreen__mainDescription_buttonBox--createbtn-buttonText1 {
@@ -221,7 +221,7 @@
 }
 
 .splashScreen__mainDescription_buttonBox--createbtn-buttonText2 span {
-  transform: translateY(-1.2em);
+  transform: translateY(-3em);
 }
 
 .splashScreen__mainDescription_buttonBox--createbtn-buttonText2 span {
@@ -287,7 +287,7 @@
 .splashScreen__mainDescription_buttonBox--optionButtons li a span {
   position: absolute;
   top: 0;
-  font-size: 13px;
+  font-size: 0.8rem;
   white-space: nowrap;
   pointer-events: none;
   opacity: 0;
@@ -308,6 +308,7 @@
   color: #ffffff;
   opacity: 1;
   transition-delay: 0.9s;
+  transform: translateY(calc(100% + 2rem));
 }
 
 .splashScreen__mainDescription_buttonBox--optionButtons.active li a:hover {
