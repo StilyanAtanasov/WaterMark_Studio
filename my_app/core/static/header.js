@@ -15,7 +15,7 @@ class Header extends HTMLElement {
 
     this.innerHTML = `
     <div class="mobileLeftSide">
-      <div id="bars" class="bars">
+      <div id="bars" class="bars" onclick="bars()">
         <div id="bar1" class="bar"></div>
         <div id="bar2" class="bar"></div>
         <div id="bar3" class="bar"></div>
@@ -59,12 +59,12 @@ class Header extends HTMLElement {
 customElements.define("header-element", Header);
 
 // Open-Close animation
-let bar1 = document.getElementById("bar1");
-let bar2 = document.getElementById("bar2");
-let bar3 = document.getElementById("bar3");
-let header = document.getElementById("navbar");
+function bars() {
+  let bar1 = document.getElementById("bar1");
+  let bar2 = document.getElementById("bar2");
+  let bar3 = document.getElementById("bar3");
+  let header = document.getElementById("navbar");
 
-document.getElementById("bars").onclick = function () {
   if (bar1.classList.contains("action") === false) {
     bar1.classList.add("action");
     bar2.classList.add("action");
@@ -78,7 +78,7 @@ document.getElementById("bars").onclick = function () {
     bar3.classList.remove("action");
     header.classList.remove("action");
   }
-};
+}
 
 function toggleDropdown() {
   let dropdownItems = document.getElementById("dropdown__items");

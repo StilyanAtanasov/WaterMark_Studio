@@ -321,16 +321,16 @@ input {
   transform: rotate(-45deg) translateX(0.7rem);
 }
 
-header-element.action .dropdown,
-header-element.action a.navlogo {
+#navbar.action .dropdown,
+#navbar.action a.navlogo {
   transform: translateY(-30vh);
   animation-name: diasappear;
   animation-duration: 200ms;
   animation-fill-mode: forwards;
 }
 
-header-element.action .navWrap,
-header-element.action .logoutContainer {
+#navbar.action .navWrap,
+#navbar.action .logoutContainer {
   transform: translate(0);
   display: block;
 }
@@ -355,6 +355,34 @@ header-element.action .logoutContainer {
 }
 
 /* Media */
+/* Phone */
+@media only screen and (max-width: 600px) {
+  .bars {
+    display: flex;
+  }
+
+  .navWrap {
+    display: none;
+  }
+
+  .logoutContainer {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .navbar {
+    width: 100vw;
+  }
+
+  .navlogo {
+    font-size: 2rem;
+  }
+
+  .sidebar {
+    scale: 0.8;
+  }
+}
 
 /* TV */
 @media screen and ((min-width: 2000px) or (min-height: 1500px)) {
@@ -374,35 +402,5 @@ header-element.action .logoutContainer {
   .navlink,
   .link {
     font-size: calc(100vw / 100);
-  }
-}
-
-/* Phone */
-@media only screen and (max-width: 600px) {
-  .bars {
-    display: flex;
-  }
-
-  .navWrap {
-    display: none;
-  }
-
-  .logoutContainer {
-    display: none;
-  }
-}
-
-@media only screen and (max-width: 350px) {
-  header-element {
-    width: 100vw;
-    padding: 1rem 2rem;
-  }
-
-  .navlogo {
-    font-size: 2rem;
-  }
-
-  .sidebar {
-    scale: 0.8;
   }
 }
