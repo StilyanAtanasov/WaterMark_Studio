@@ -2,14 +2,29 @@
 
 /* BASIC */
 
+* {
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
 html {
   background-color: rgba(39, 37, 37, 0.911);
   height: 100vh;
+  -ms-overflow-style: none; /*  Hide scrollbar for IE and Edge */
+  scrollbar-width: none; /*  Hide scrollbar for Firefox */
+}
+
+html::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari and Opera */
 }
 
 body {
   font-family: "Poppins", sans-serif;
   position: relative;
+  margin: 0.6rem;
 }
 
 a {
@@ -72,40 +87,24 @@ h2:hover {
 
 .fadeIn {
   opacity: 0;
-  -webkit-animation: fadeIn ease-in 1;
-  -moz-animation: fadeIn ease-in 1;
   animation: fadeIn ease-in 1;
-
-  -webkit-animation-fill-mode: forwards;
-  -moz-animation-fill-mode: forwards;
   animation-fill-mode: forwards;
-
-  -webkit-animation-duration: 1s;
-  -moz-animation-duration: 1s;
   animation-duration: 1s;
 }
 
 .fadeIn.first {
-  -webkit-animation-delay: 0.4s;
-  -moz-animation-delay: 0.4s;
   animation-delay: 0.4s;
 }
 
 .fadeIn.second {
-  -webkit-animation-delay: 0.6s;
-  -moz-animation-delay: 0.6s;
   animation-delay: 0.6s;
 }
 
 .fadeIn.third {
-  -webkit-animation-delay: 0.8s;
-  -moz-animation-delay: 0.8s;
   animation-delay: 0.8s;
 }
 
 .fadeIn.fourth {
-  -webkit-animation-delay: 1s;
-  -moz-animation-delay: 1s;
   animation-delay: 1s;
 }
 
@@ -130,10 +129,6 @@ h2:hover {
 
 /* OTHERS */
 
-*:focus {
-  outline: none;
-}
-
 #icon {
   width: 30%;
   margin-top: 2vh;
@@ -141,15 +136,7 @@ h2:hover {
   display: unset;
 }
 
-* {
-  box-sizing: border-box;
-}
-
 /* masonry */
-
-body {
-  margin: 0.6rem;
-}
 
 .grid {
   columns: 20rem;
@@ -168,17 +155,6 @@ body {
   align-items: center;
   justify-content: center;
   object-fit: cover;
-}
-
-/* Hide scrollbar for Chrome, Safari and Opera */
-html::-webkit-scrollbar {
-  display: none;
-}
-
-/* Hide scrollbar for IE, Edge and Firefox */
-html {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
 }
 
 .wrapper {
@@ -319,46 +295,24 @@ html {
   margin-right: 3rem;
 }
 
-/* ANIMATIONS */
-
 .fadeInDown {
-  -webkit-animation-name: fadeInDown;
   animation-name: fadeInDown;
-  -webkit-animation-duration: 1s;
   animation-duration: 1s;
-  -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
 
+/* ANIMATIONS */
 @keyframes fadeInDown {
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(0, -50%, 0);
     transform: translate3d(0, -50%, 0);
   }
   100% {
     opacity: 1;
-    -webkit-transform: none;
     transform: none;
   }
 }
 
-@-webkit-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-@-moz-keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -369,16 +323,29 @@ html {
 }
 
 /* ---------------------------- MEDIA ---------------------------- */
-
-@media screen and ((max-height: 800px) or (max-width: 480px)) {
-  .wrapper {
-    scale: 0.7;
+/* TV */
+@media screen and (min-width: 5000px) {
+  .grid {
+    columns: 35rem;
   }
 }
 
-@media screen and ((max-height: 800px) or (max-width: 340px)) {
-  .wrapper {
-    scale: 0.5;
+@media screen and (min-width: 4000px) {
+  .grid {
+    columns: 30rem;
+  }
+}
+
+@media screen and ((min-width: 3000px) or (min-height: 1700px)) {
+  html {
+    font-size: 25px;
+  }
+}
+
+/* Monitor */
+@media screen and ((min-width: 2000px) or (min-height: 1400px)) {
+  html {
+    font-size: 20px;
   }
 }
 
@@ -389,32 +356,21 @@ html {
   }
 }
 
-@media screen and ((min-width: 2000px) or (min-height: 1400px)) {
-  html {
-    font-size: 20px;
-  }
-}
-
-@media screen and ((min-width: 3000px) or (min-height: 1700px)) {
-  html {
-    font-size: 25px;
-  }
-}
-
+/* Phone */
 @media screen and (max-height: 900px) {
   html {
     font-size: 12px;
   }
 }
 
-@media screen and (min-width: 4000px) {
-  .grid {
-    columns: 30rem;
+@media screen and ((max-height: 800px) or (max-width: 480px)) {
+  .wrapper {
+    scale: 0.7;
   }
 }
 
-@media screen and (min-width: 5000px) {
-  .grid {
-    columns: 35rem;
+@media screen and ((max-height: 800px) or (max-width: 340px)) {
+  .wrapper {
+    scale: 0.5;
   }
 }
