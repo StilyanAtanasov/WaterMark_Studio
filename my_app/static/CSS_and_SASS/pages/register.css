@@ -9,6 +9,7 @@ html {
 
 body {
   font-family: "Poppins", sans-serif;
+  position: relative;
 }
 
 a {
@@ -153,6 +154,7 @@ body {
 .grid {
   columns: 20rem;
   pointer-events: none;
+  position: absolute;
 }
 
 .item ~ .item {
@@ -183,8 +185,7 @@ html {
   align-items: center;
   flex-direction: column;
   padding: 1.3rem;
-  top: 10%;
-  position: absolute;
+  position: fixed;
   left: 0;
   width: 100vw;
 }
@@ -240,7 +241,7 @@ html {
   top: -20px;
   transform: translateY(0);
   transition: transform 200ms;
-  width: 4.5rem;
+  width: 5rem;
 }
 
 .cut-short {
@@ -261,12 +262,12 @@ html {
   position: absolute;
   transform-origin: 0 50%;
   transition: transform 200ms, color 200ms;
-  top: 1rem;
+  top: 0.7rem;
 }
 
 .input:focus ~ .placeholder,
 .input:not(:placeholder-shown) ~ .placeholder {
-  transform: translateY(-30px) translateX(10px) scale(0.75);
+  transform: translateY(-1.5rem) translateX(10px) scale(0.75);
 }
 
 .input:not(:placeholder-shown) ~ .placeholder {
@@ -285,7 +286,7 @@ html {
   color: #eee;
   cursor: pointer;
   font-size: 1.2rem;
-  height: 50px;
+  height: 3rem;
   margin-top: 2.5rem;
   outline: 0;
   text-align: center;
@@ -301,6 +302,7 @@ html {
   display: flex;
   justify-content: center;
   border-radius: 15px;
+  margin-top: -1.5rem;
 }
 
 .google_button {
@@ -367,10 +369,15 @@ html {
 
 /* ---------------------------- MEDIA ---------------------------- */
 
-@media screen and (max-height: 800px) {
+@media screen and ((max-height: 800px) or (max-width: 480px)) {
   .wrapper {
-    scale: 0.6;
-    top: 10%;
+    scale: 0.7;
+  }
+}
+
+@media screen and ((max-height: 800px) or (max-width: 340px)) {
+  .wrapper {
+    scale: 0.5;
   }
 }
 

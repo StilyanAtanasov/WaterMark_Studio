@@ -46,7 +46,10 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
     />
     <link rel="stylesheet" href="../../static/CSS/main.css" />
-    <link rel="stylesheet" href="../../static/CSS/pages/register.css" />
+    <link
+      rel="stylesheet"
+      href="../../static/CSS_and_SASS/pages/register.css"
+    />
   </head>
   <body>
     <div class="grid">
@@ -143,71 +146,66 @@
       <div class="item">
         <img id="img30" src="#" class="icon" style="display: none" />
       </div>
-      <div class="wrapper fadeInDown">
-        <div id="formContent">
-          <!-- Tabs Titles -->
-          <h2 class="active">Sign In</h2>
-          <a href="/signup"><h2 class="inactive underlineHover">Sign Up</h2></a>
+    </div>
+    <div class="wrapper fadeInDown">
+      <div id="formContent">
+        <!-- Tabs Titles -->
+        <h2 class="active">Sign In</h2>
+        <a href="./signup.html"
+          ><h2 class="inactive underlineHover">Sign Up</h2></a
+        >
 
-          <!-- Icon -->
-          <div class="fadeIn first">
-            <i class="fa-solid fa-circle-user userIcon"></i>
-          </div>
-
-          <!-- Login Form -->
-          <form class="form" action="/result" method="POST">
-            <div style="color: red">{{error}}</div>
-            <div class="textField">
-              <div class="input-container">
-                <input
-                  type="email"
-                  id="login"
-                  class="input fadeIn second"
-                  name="email"
-                  placeholder=" "
-                  required
-                  autocomplete="email"
-                />
-                <div class="cut cut-short"></div>
-                <label class="placeholder" for="wm_text">Email</label>
-              </div>
-              <div class="input-container">
-                <input
-                  type="password"
-                  id="password"
-                  class="input fadeIn third"
-                  name="pass"
-                  placeholder=""
-                  required
-                  autocomplete="new-password"
-                />
-                <div class="cut"></div>
-                <label class="placeholder" for="wm_text">Password</label>
-              </div>
-            </div>
-            <input type="submit" class="submit fadeIn fourth" value="Sign In" />
-
-            <!-- Google Registration Button -->
-            <div class="google_button_container" style="margin-bottom: 20px">
-              <a
-                href="/login/google"
-                class="google_button submit fadeIn fourth"
-              >
-                <img
-                  src="{{ url_for('registration_bp.static', filename = 'google_logo.png') }}"
-                  alt="google logo"
-                />
-                Sign in with Google
-              </a>
-            </div>
-          </form>
-          <!--
-    Will add in future
-      <div id="formFooter">
-        <a class="underlineHover" href="#">Forgot Password?</a>
-      </div>
-   -->
+        <!-- Icon -->
+        <div class="fadeIn first">
+          <i class="fa-solid fa-circle-user userIcon"></i>
         </div>
+
+        <!-- Login Form -->
+        <form class="form" action="/result" method="POST">
+          <div class="textField">
+            <div class="input-container">
+              <input
+                type="email"
+                id="login"
+                class="input fadeIn second"
+                name="email"
+                placeholder=" "
+                required
+                autocomplete="email"
+              />
+              <div class="cut cut-short"></div>
+              <label class="placeholder" for="wm_text">Email</label>
+            </div>
+            <div class="input-container">
+              <input
+                type="password"
+                id="password"
+                class="input fadeIn third"
+                name="pass"
+                placeholder=""
+                required
+                autocomplete="new-password"
+              />
+              <div class="cut"></div>
+              <label class="placeholder" for="wm_text">Password</label>
+            </div>
+          </div>
+          <input type="submit" class="submit fadeIn fourth" value="Sign In" />
+
+          <!-- Google Registration Button -->
+          <div class="google_button_container" style="margin-bottom: 20px">
+            <a href="/login/google" class="google_button submit fadeIn fourth">
+              <img src="../static/google_logo.png" alt="google logo" />
+              Sign in with Google
+            </a>
+          </div>
+        </form>
+        <!--
+  Will add in future
+    <div id="formFooter">
+      <a class="underlineHover" href="#">Forgot Password?</a>
+    </div>
+ -->
       </div>
     </div>
     <div id="loader" class="lds-hourglass"></div>

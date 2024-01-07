@@ -17,11 +17,10 @@ if (screenWidth <= 550) {
 } else if (screenWidth > 2000 && screenWidth <= 2700) {
   imagesNeeded = 25;
 } else {
-  imagesNeeded = 30;
+  imagesNeeded = 31;
 }
 
 let allImages = Array.from({ length: 31 }, (_, i) => i);
-
 let imagesSelected = [];
 
 // Shuffle the array
@@ -36,11 +35,11 @@ for (let index = 0; index < imagesNeeded; index++) {
 }
 
 // Apply the images to the HTML
-
-for (let index = 0; index < imagesNeeded; index++)
-  document.getElementById(
-    `img` + index
-  ).src = `../static/images/${imagesSelected[index]}.png`;
+for (let index = 0; index < imagesNeeded; index++) {
+  let element = document.getElementById(`img` + index);
+  element.src = `../static/images/${imagesSelected[index]}.png`;
+  element.style.display = "block";
+}
 
 for (let index = imagesNeeded + 1; index <= 30; index++) {
   let item = document.getElementById(`img` + index);
