@@ -155,6 +155,7 @@ body {
   columns: 20rem;
   pointer-events: none;
   position: absolute;
+  width: 100vw;
 }
 
 .item ~ .item {
@@ -403,5 +404,17 @@ html {
 @media screen and (max-height: 900px) {
   html {
     font-size: 12px;
+  }
+}
+
+@media screen and (min-width: 4000px) {
+  .grid {
+    columns: 30rem;
+  }
+}
+
+@media screen and (min-width: 5000px) {
+  .grid {
+    columns: 35rem;
   }
 }
