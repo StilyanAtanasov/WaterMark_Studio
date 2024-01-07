@@ -3,17 +3,17 @@
   width: 100vw;
   height: 100vh;
   background: linear-gradient(0.25turn, #000122, #000118);
-  position: absolute;
+  position: fixed;
+  top: -50vh;
 }
 
 .lds-hourglass {
   display: inline-block;
-  position: relative;
+  position: fixed;
   width: 0;
   height: 0;
   opacity: 1;
   transition: all 300ms linear;
-  position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%);
