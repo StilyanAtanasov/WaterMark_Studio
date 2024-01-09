@@ -56,6 +56,10 @@ footer-element ul {
   text-align: center;
 }
 
+.navlink a {
+  color: #bcbcbc;
+}
+
 .navlink.small {
   font-size: 1rem;
   cursor: pointer;

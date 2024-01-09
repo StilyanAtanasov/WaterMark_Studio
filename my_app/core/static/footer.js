@@ -33,10 +33,10 @@ class Footer extends HTMLElement {
         <div class="footerGroup">
           <p class="footerTitle">Media</p>
           <ul class="navlinkwrap">
-            <li class="navlink small">Facebook</li>
-            <li class="navlink small">Instagram</li>
-            <li class="navlink small">YouTube</li>
-            <li class="navlink small">Twitter</li>
+            <li class="navlink small"><a href="https://www.facebook.com/profile.php?id=61555144664420" target="_blank">Facebook</a></li>
+            <li class="navlink small"><a href="https://www.instagram.com/wmarkstudio/?next=%2F" target="_blank">Instagram</a></li>
+            <li class="navlink small"><a href="https://www.youtube.com/channel/UCIWmGlRYPryb1hSlctDlKqQ" target="_blank">YouTube</a></li>
+            <li class="navlink small"><a href="https://github.com/CoolShadow1/WaterMark_Studio" target="_blank">GitHub</a></li>
           </ul>
         </div>
       </div>`;
