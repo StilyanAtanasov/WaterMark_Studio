@@ -9,22 +9,12 @@
     <link
       rel="icon"
       type="image/x-icon"
-      href="{{ url_for('core_bp.static', filename='images/WM1.ico') }}"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{{ url_for('core_bp.static', filename='loader.css') }}"
+      href="../../core/static/images/WM1.ico"
     />
     <link
       rel="stylesheet"
       type="text/css"
       href="{{ url_for('core_bp.static', filename='reset.css') }}"
-    />
-    <link
-      rel="stylesheet"
-      type="text/css"
-      href="{{ url_for('registration_bp.static', filename='register.css') }}"
     />
     <link
       rel="stylesheet"
@@ -47,23 +37,27 @@
     />
   </head>
   <body>
+    <!-- Images grid /masonry background/ -->
     <div id="grid" class="grid"></div>
+
+    <!-- Form -->
     <div class="wrapper fadeInDown">
       <div id="formContent">
-        <!-- Tabs Titles -->
+        <!-- Tabs -->
         <a href="./login.html"
           ><h2 class="inactive underlineHover">Sign In</h2></a
         >
         <h2 class="active">Sign Up</h2>
 
-        <!-- Icon -->
+        <!-- User icon -->
         <div class="fadeIn first">
           <i class="fa-solid fa-circle-user userIcon"></i>
         </div>
 
-        <!-- SignUp Form -->
+        <!-- Sign Up Form -->
         <form class="form" action="/register" method="POST">
           <div class="textField">
+            <!-- Name input container -->
             <div class="input-container">
               <input
                 type="text"
@@ -77,6 +71,8 @@
               <div class="cut cut-short"></div>
               <label class="placeholder" for="wm_text">Name</label>
             </div>
+
+            <!-- Email input container -->
             <div class="input-container">
               <input
                 type="email"
@@ -90,6 +86,8 @@
               <div class="cut cut-short"></div>
               <label class="placeholder" for="wm_text">Email</label>
             </div>
+
+            <!-- Password input container -->
             <div class="input-container">
               <input
                 type="password"
@@ -104,6 +102,8 @@
               <label class="placeholder" for="wm_text">Password</label>
             </div>
           </div>
+
+          <!-- Submit button -->
           <input type="submit" class="submit fadeIn fourth" value="Sign Up" />
 
           <!-- Google Registration Button -->
@@ -116,7 +116,11 @@
         </form>
       </div>
     </div>
+
+    <!-- Loader -->
     <div id="loader" class="lds-hourglass"></div>
+
+    <!-- JavaScript connections -->
     <script src="../static/imageSelector.js"></script>
     <script src="../../core/static/loading.js"></script>
   </body>
