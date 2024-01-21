@@ -127,15 +127,6 @@ h2:hover {
   width: 100%;
 }
 
-/* OTHERS */
-
-#icon {
-  width: 30%;
-  margin-top: 2vh;
-  margin-bottom: 2vh;
-  display: unset;
-}
-
 /* masonry */
 
 .grid {

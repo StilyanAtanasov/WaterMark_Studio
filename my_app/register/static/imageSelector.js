@@ -34,15 +34,16 @@ for (let index = 0; index < imagesNeeded; index++) {
   imagesSelected.push(`img` + allImages[index]);
 }
 
-// Apply the images to the HTML
+// Append the images to the HTML
+let grid = document.getElementById(`grid`);
 for (let index = 0; index < imagesNeeded; index++) {
-  let element = document.getElementById(`img` + index);
-  element.src = `../static/images/${imagesSelected[index]}.png`;
-  element.style.display = "block";
-}
-
-for (let index = imagesNeeded + 1; index <= 30; index++) {
-  let item = document.getElementById(`img` + index);
-  item.src = `#`;
-  item.style.display = `none`;
+  let div = document.createElement("div");
+  let img = document.createElement("img");
+  div.className = `item`;
+  img.src = `../static/images/${imagesSelected[index]}.png`;
+  div.appendChild(img);
+  grid.appendChild(div);
+  // let element = document.getElementById(`img` + index);
+  // element.src = `../static/images/${imagesSelected[index]}.png`;
+  // element.style.display = `block`;
 }
