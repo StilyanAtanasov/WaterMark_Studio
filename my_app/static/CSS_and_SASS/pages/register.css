@@ -77,12 +77,16 @@ img {
 h2.inactive {
   color: #cccccc;
   border-bottom: 0rem solid transparent;
+  transition: all 300ms linear;
 }
 
-h2.active,
-h2:hover {
+h2.inactive:hover {
+  color: #fff;
+}
+
+h2.active {
   color: #5fbae9;
-  border-bottom: 0.1rem solid #5fbae9;
+  border-bottom: 0.15rem solid #5fbae9;
 }
 
 .fadeIn {
@@ -110,13 +114,12 @@ h2:hover {
 
 .underlineHover::after {
   display: block;
-  left: 0;
-  bottom: -10px;
-  width: 0;
+  width: 100%;
+  scale: 0;
   height: 0.1rem;
   background-color: #56baed;
   content: "";
-  transition: width 400ms;
+  transition: scale 400ms;
 }
 
 .underlineHover:hover {
@@ -124,7 +127,7 @@ h2:hover {
 }
 
 .underlineHover:hover::after {
-  width: 100%;
+  scale: 1;
 }
 
 /* masonry */
@@ -161,6 +164,8 @@ h2:hover {
 .submitBTN:hover {
   cursor: pointer;
 }
+
+/* Form */
 
 .form {
   background-color: #15172b;
