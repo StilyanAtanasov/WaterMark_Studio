@@ -1,12 +1,12 @@
-.lds-hourglass::before {
-  content: "";
+.loader::before {
+  content: "Loading";
   width: 100vw;
   height: 100vh;
   background: linear-gradient(0.25turn, #000122, #000118);
   position: absolute;
 }
 
-.lds-hourglass {
+.loader {
   display: inline-block;
   position: relative;
   width: 0;
@@ -23,7 +23,7 @@
   justify-content: center;
 }
 
-.lds-hourglass::after {
+.loader::after {
   position: absolute;
   z-index: 900;
   content: " ";
@@ -36,16 +36,16 @@
   box-sizing: border-box;
   border: 32px solid #fff;
   border-color: #fff transparent #fff transparent;
-  animation: lds-hourglass 1.2s infinite;
+  animation: spin 1.2s infinite;
   transition: all 300ms linear;
 }
 
-.lds-hourglass.hidden {
+.loader.hidden {
   opacity: 0;
   display: none;
 }
 
-@keyframes lds-hourglass {
+@keyframes spin {
   0% {
     transform: rotate(0);
     animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);

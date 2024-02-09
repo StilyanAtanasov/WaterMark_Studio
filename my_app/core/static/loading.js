@@ -1,7 +1,10 @@
+let loader = document.getElementById("loader");
+
 window.addEventListener("load", function () {
-  let loader = document.getElementById("loader");
   loader.classList.add("hidden");
-  loader.addEventListener("transitionend", function () {
-    document.removeChild(loader);
-  });
 });
+
+function Load(path) {
+  loader.classList.remove("hidden");
+  window.location.href = path;
+}

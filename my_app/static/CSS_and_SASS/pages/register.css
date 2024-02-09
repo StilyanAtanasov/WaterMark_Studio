@@ -2,10 +2,6 @@
 
 /* BASIC */
 
-* {
-  box-sizing: border-box;
-}
-
 *:focus {
   outline: none;
 }
@@ -13,6 +9,7 @@
 html {
   background-color: rgba(39, 37, 37, 0.911);
   height: 100vh;
+  width: 100vw;
   -ms-overflow-style: none; /*  Hide scrollbar for IE and Edge */
   scrollbar-width: none; /*  Hide scrollbar for Firefox */
 }
@@ -24,7 +21,7 @@ html::-webkit-scrollbar {
 body {
   font-family: "Poppins", sans-serif;
   position: relative;
-  margin: 0.6rem;
+  padding: 1rem;
 }
 
 a {
@@ -58,7 +55,6 @@ img {
   border-radius: 10px;
   width: 30rem;
   background: #fff;
-  padding: 0px;
   -webkit-box-shadow: 0 2rem 4rem 0 rgba(0, 0, 0, 0.3);
   box-shadow: 0 2rem 4rem 0 rgba(0, 0, 0, 0.3);
   text-align: center;
@@ -87,6 +83,7 @@ h2.inactive:hover {
 h2.active {
   color: #5fbae9;
   border-bottom: 0.15rem solid #5fbae9;
+  margin: 0 0.5rem;
 }
 
 .fadeIn {
@@ -130,13 +127,13 @@ h2.active {
   scale: 1;
 }
 
-/* masonry */
+/* Masonry */
 
 .grid {
   columns: 20rem;
   pointer-events: none;
   position: absolute;
-  width: 100vw;
+  width: calc(100vw - 2rem);
 }
 
 .item ~ .item {
