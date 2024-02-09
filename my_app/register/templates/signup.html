@@ -34,7 +34,10 @@
       <div id="formContent">
         <!-- Tabs -->
         <a href="#."
-          ><h2 class="inactive underlineHover" onclick="Load(`./login.html`)">
+          ><h2
+            class="inactive underlineHover"
+            onclick="LoadPath(`./login.html`)"
+          >
             Sign In
           </h2></a
         >
@@ -99,7 +102,11 @@
 
           <!-- Google Registration Button -->
           <div class="google_button_container" style="margin-bottom: 20px">
-            <a href="/login/google" class="google_button submit fadeIn fourth">
+            <a
+              href="/login/google"
+              class="google_button submit fadeIn fourth"
+              onclick="LoadingScreen()"
+            >
               <img src="../static/google_logo.png" alt="google logo" />
               Sign in with Google
             </a>

@@ -232,7 +232,7 @@ h2.active {
   position: absolute;
   transform-origin: 0 50%;
   transition: transform 200ms, color 200ms;
-  top: 0.7rem;
+  top: 1rem;
 }
 
 .input:focus ~ .placeholder,

@@ -4,7 +4,12 @@ window.addEventListener("load", function () {
   loader.classList.add("hidden");
 });
 
-function Load(path) {
+function LoadPath(path) {
+  loader.classList.remove("hidden");
+  window.location.href = path;
+}
+
+function LoadingScreen(path) {
   loader.classList.remove("hidden");
   window.location.href = path;
 }
