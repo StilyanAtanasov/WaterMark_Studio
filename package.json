@@ -4,8 +4,8 @@
   "description": "",
   "main": "my_app/__init__.py",
   "scripts": {
-    "compile:sass:development": "node-sass --watch --no-source-map --output-style=expanded my_app/static/CSS_and_SASS -o my_app/static/CSS_and_SASS",
-    "compile:sass:production": "node-sass --output-style=compressed my_app/static/CSS_and_SASS -o my_app/static/CSS_and_SASS"
+    "compile:sass:development": "node-sass --watch --no-source-map --output-style=expanded my_app/SASS -o my_app/SASS",
+    "compile:sass:production": "node-sass --output-style=compressed my_app/SASS -o my_app/SASS"
   },
   "author": "Stilyan Atanasov and Teodor Todorov",
   "license": "Apache-2.0",

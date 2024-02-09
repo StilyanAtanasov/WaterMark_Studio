@@ -88,17 +88,11 @@
 
 /* ----------------------- Splash screen -----------------------*/
 #coreMain {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  @extend %centeredFlexColumn;
 }
 
 #desc {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  @extend %centeredFlexColumn;
   width: 80vw;
   margin-top: 3rem;
 }
@@ -132,15 +126,13 @@
 
       &--createbtn {
         @extend %splashScreenButtons;
+        @extend %centeredFlexRow;
         margin-left: 1.5rem;
         background-color: transparent;
         border: 1px solid #d7d7d7;
         font-weight: bold;
         color: white;
         cursor: pointer;
-        display: flex;
-        justify-content: center;
-        align-items: center;
         position: relative;
 
         &:hover
@@ -238,6 +230,7 @@
           transform: translateX(-350%) scale(0);
 
           a {
+            @extend %centeredFlexRow;
             border-radius: 100%;
             border: 0.1rem solid darken(#00eeff, 25%);
             background-color: #00eeff;
@@ -246,9 +239,6 @@
             height: 3rem;
             color: #000118;
             text-align: center;
-            display: flex;
-            align-items: center;
-            justify-content: center;
             cursor: pointer;
             font-size: 1.5rem;
             transition: all 300ms ease-in-out;
@@ -329,67 +319,62 @@
   flex-direction: column;
   scale: 1.5;
   margin-bottom: 12rem;
-}
 
-.started-items::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 7rem;
-  top: 80px;
-  filter: blur(5rem);
-  background: linear-gradient(93deg, #9b51e0 15%, #3081ed 85%);
-}
+  &__items {
+    padding: 3rem 5rem;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(4, 10rem);
+    grid-column-gap: 3rem;
+    grid-row-gap: 3rem;
+    justify-content: space-between;
 
-.started-items {
-  padding: 3rem 4rem;
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(4, 10rem);
-  grid-column-gap: 3rem;
-  grid-row-gap: 3rem;
-  justify-content: space-between;
-}
+    &::before {
+      content: "";
+      position: absolute;
+      width: 100%;
+      height: 7rem;
+      top: 80px;
+      filter: blur(5rem);
+      background: linear-gradient(93deg, #9b51e0 15%, #3081ed 85%);
+    }
 
-.started-items-item {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 7rem;
-  height: 7rem;
-  border-radius: 1.5rem;
-  background-color: red;
-  background: rgba(255, 255, 255, 0.095);
-  box-shadow: inset 2px -2px 20px rgba(214, 214, 214, 0.17),
-    inset -3px 3px 3px rgba(255, 255, 255, 0.39);
-  backdrop-filter: blur(74px);
-}
+    &_item {
+      @extend %centeredFlexRow;
+      width: 7rem;
+      height: 7rem;
+      border-radius: 1.5rem;
+      background-color: red;
+      background: rgba(255, 255, 255, 0.095);
+      box-shadow: inset 2px -2px 20px rgba(214, 214, 214, 0.17),
+        inset -3px 3px 3px rgba(255, 255, 255, 0.39);
+      backdrop-filter: blur(74px);
 
-.started-items-item * {
-  font-size: 2rem;
-  color: antiquewhite;
-  --fa-animation-duration: 2s;
-}
+      * {
+        font-size: 2rem;
+        color: antiquewhite;
+        --fa-animation-duration: 2s;
+      }
+    }
 
-.itemwrapper p {
-  width: 10rem;
-  margin: 0;
-  margin-top: 1rem;
-  text-align: center;
-  font-family: "Poppins";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 1rem;
-  color: #ffffff;
-  align-self: center;
-  position: relative;
-}
+    &_itemwrapper {
+      @extend %centeredFlexColumn;
 
-.itemwrapper {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
+      p {
+        width: 10rem;
+        margin: 0;
+        margin-top: 1rem;
+        text-align: center;
+        font-family: "Poppins";
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1rem;
+        color: #ffffff;
+        align-self: center;
+        position: relative;
+      }
+    }
+  }
 }
 
 .right {

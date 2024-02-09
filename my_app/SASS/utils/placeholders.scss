@@ -13,3 +13,16 @@
   width: 10.5rem;
   height: 3.1rem;
 }
+
+%centeredFlexColumn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+%centeredFlexRow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
